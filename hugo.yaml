@@ -207,76 +207,42 @@ params:
           - name: "L2 Cloud Operation Engineer at Btech"
             date: "Aug 2023 - present"
             content: |-
-              * Execute configuration changes at the production level of private cloud components.
-              * Assist other teams when making configuration changes at the production level that impact the cloud environment.
-              * Provide direction and guidance to L1 Cloud Engineers.
-              * Monitor every action L1 Cloud Engineers take in the private cloud environment.
-              * Troubleshoot critical issues that cannot be resolved by L1 Cloud Engineers.
+              * Execute and oversee production-level configuration changes for private cloud components.
+              * Mentor and provide technical guidance to L1 Cloud Engineers.
+              * Lead troubleshooting and root cause analysis for critical infrastructure issues.
           - name: "L1 Cloud Operation Engineer at Btech"
             date: "Jun 2021 - Aug 2023"
             content: |-
-              * Managed private cloud using OpenStack (IaaS), Ceph (Storage Cluster), Grafana & Prometheus/Victoriametrics, Graylog & Elasticsearch, Zabbix, Juju (Deployment tool), and MAAS (Physical server management).
-              * Deployed, configured, and maintained Kubernetes clusters inside the cloud environment.
-              * Monitored all private cloud components, anticipated and mitigated risks within defined SLAs, and generated monthly reports.
-              * Responded to alerts from monitoring systems and coordinated with developer, network, or hardware teams for issue resolution.
-              * Researched to optimize cloud resource utilization, balancing performance or enabling/changing features, and created Technical Documents (TD) and Methods of Procedure (MOP).
-              * Troubleshot and created Root Cause Analysis (RCA) for any issues in the private cloud components.
-              * Automated repetitive tasks using Bash, Python, or Ansible.
+              * Managed private cloud infrastructure (OpenStack, Ceph) and monitoring systems (Prometheus, Grafana, ELK).
+              * Deployed and maintained Kubernetes clusters and automated repetitive tasks using Ansible and Python.
+              * Mitigated risks within defined SLAs and generated detailed monthly performance reports.
           - name: "Mentor and Instructor at ADINUSA"
             date: "Jul 2021 - Jan 2023"
             content: |-
-              * Acted as a mentor and instructor for CompTIA Network+, Linux+, Security+, and PenTest+ courses for Vocational High School and Undergraduate students.
-              * Instructor for LFCA (Linux Foundation Certified IT Associate) and LFCS (Linux Foundation Certified System Administrator) courses for professional audiences.
+              * Instructed CompTIA (Network+, Security+, PenTest+) and Linux Foundation (LFCA, LFCS) courses for professional and student audiences.
           - name: "Network Engineer at PT. Graha Karya Informasi"
             date: "Aug 2019 - Dec 2019"
             content: |-
-              * Installation, maintenance, and dismantling of IT network appliances in branch offices.
+              * Installed and maintained IT network appliances in branch offices.
 
       - company: "Internship"
         jobs:
           - name: "Core Network Operation at PT Telkom Indonesia"
             date: "Aug 2020 - Sep 2020"
             content: |-
-              * Learned backbone enterprise-grade network appliances, topology, and monitoring tools.
+              * Analyzed backbone enterprise-grade network appliances and topologies.
           - name: "Network Engineer at BLC Telkom - KPLI Klaten"
             date: "Nov 2015 - Feb 2016"
             content: |-
-              * Learned about computer networking, wireless networking, cloud computing, and system administration.
-              * Installed network appliances and assisted in training high school students for their final practical tests.
+              * Trained high school students in networking and cloud computing fundamentals.
 
       - company: "Projects"
         jobs:
-          - name: "Challenge Author at TSA Cyber Champion 2024"
-            date: "Nov 2024 - Nov 2024"
+          - name: "Cybersecurity Challenge Author & Judge"
+            date: "2022 - Present"
             content: |-
-              * Created cybersecurity challenges for the pwn/binary exploitation category for the national competition organized by the Ministry of Communication and Informatics.
-          - name: "Challenge Author at 0byteCTF 2024"
-            date: "Aug 2024 - Aug 2024"
-            content: |-
-              * Created cybersecurity challenges for the pwn/binary exploitation category for the public audience of the Zerobyte.id Community.
-          - name: "Challenge Author at Compfest CTF 2023"
-            date: "Sep 2023 - Sep 2023"
-            content: |-
-              * Created cybersecurity challenges for the pwn/binary exploitation category for the undergraduate student competition by the University of Indonesia.
-          - name: "Challenge Author at 0byteCTF 2023"
-            date: "Aug 2023 - Aug 2023"
-            content: |-
-              * Created cybersecurity challenges for the pwn/binary exploitation category for the public audience of the Zerobyte.id Community.
-          - name: "Challenge Author & Judge at Cyber Security Hackathon 2023"
-            date: "Apr 2023 - May 2023"
-            content: |-
-              * Created cybersecurity challenges in several categories such as cryptography, reverse engineering, cloud-native exploitation, and binary exploitation.
-              * Designed and maintained the competition platform and judged participant works.
-          - name: "Challenge Author & Judge at LKS Cyber Security Bogor 2023"
-            date: "Apr 2023 - Apr 2023"
-            content: |-
-              * Created challenges in several categories such as cryptography, reverse engineering, network forensics, binary exploitation, and web exploitation.
-              * Created hardening server problems and tested participant works.
-          - name: "Challenge Author & Judge at Cyber Security Hackathon 2022"
-            date: "Oct 2022 - Nov 2022"
-            content: |-
-              * Created cybersecurity challenges in several categories such as cryptography, reverse engineering, digital forensics, and binary exploitation.
-              * Designed and maintained the competition platform and judged participant works.
+              * **Lead Challenge Author (Pwn/Binary Exploitation)** for national CTFs: **TSA Cyber Champion 2024**, **Compfest CTF 2023**, and **0byteCTF (2023 & 2024)**.
+              * **Technical Judge & Platform Architect** for **Cyber Security Hackathon (2022-2023)** and **LKS Bogor 2023**, managing assessment and server hardening challenges.
 
   # Education
   education:
