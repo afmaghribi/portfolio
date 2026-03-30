@@ -206,40 +206,59 @@ params:
     enable: true
     # title: "Custom Name"
     items:
-      - company: "PT. Boer Technology (Btech)"
-        companyUrl: "https://btech.id"
+      - company: "Experience"
         jobs:
-          - name: "L2 Cloud Operation Engineer"
+          - name: "L2 Cloud Operation Engineer at Btech"
             date: "Aug 2023 - present"
             content: |-
               * Execute configuration changes at the production level of private cloud components.
               * Assist other teams when making configuration changes at the production level that impact the cloud environment.
               * Provide direction and guidance to L1 Cloud Engineers.
               * Troubleshoot critical issues that cannot be resolved by L1 Cloud Engineers.
-          - name: "L1 Cloud Operation Engineer"
+          - name: "L1 Cloud Operation Engineer at Btech"
             date: "Jun 2021 - Aug 2023"
             content: |-
               * Managed private cloud using OpenStack (IaaS), Ceph (Storage), and Prometheus/Grafana (Monitoring).
               * Deployed and maintained Kubernetes clusters within the cloud environment.
               * Automated repetitive tasks using Bash, Python, and Ansible.
               * Performed RCA (Root Cause Analysis) for any issues in the private cloud components.
-
-      - company: "ADINUSA"
-        companyUrl: "https://adinusa.id"
-        jobs:
-          - name: "Mentor and Instructor"
+          - name: "Mentor and Instructor at ADINUSA"
             date: "Jul 2021 - Jan 2023"
             content: |-
               * Taking part as mentor and instructor in CompTIA Network+, Linux+, Security+ and PenTest+ courses for students.
               * Instructor for LFCA and LFCS courses for professional audiences.
-
-      - company: "PT. Graha Karya Informasi"
-        companyUrl: "https://example.com"
-        jobs:
-          - name: "Network Engineer"
+          - name: "Network Engineer at PT. Graha Karya Informasi"
             date: "Aug 2019 - Dec 2019"
             content: |-
               * Installation, maintenance and dismantle IT network appliances in the branch office.
+
+      - company: "Internship"
+        jobs:
+          - name: "Core Network Operation at PT Telkom Indonesia"
+            date: "Aug 2020 - Sep 2020"
+            content: |-
+              * Learning backbone enterprise grade network appliances, topology and monitoring tools.
+          - name: "Network Engineer at BLC Telkom - KPLI Klaten"
+            date: "Nov 2015 - Feb 2016"
+            content: |-
+              * Learning about computer networking, wireless networking, cloud computing and system administration.
+              * Installation network appliances and helping training high school student for final practical test.
+
+      - company: "Projects"
+        jobs:
+          - name: "Challenge Author at TSA Cyber Champion 2024"
+            date: "Nov 2024 - Nov 2024"
+            content: |-
+              * Create cybersecurity challenges for pwn/binary exploitation category for the national competition organized by Ministry of Communication and Informatics.
+          - name: "Challenge Author at 0byteCTF"
+            date: "Aug 2023 - Aug 2024"
+            content: |-
+              * Created cybersecurity challenges for the pwn/binary exploitation category for the Zerobyte.id Community.
+          - name: "Challenge Author & Judge at Cyber Security Hackathon"
+            date: "Oct 2022 - May 2023"
+            content: |-
+              * Create cybersecurity challenges in several categories such as cryptography, reverse engineering, cloud native exploitation and binary exploitation.
+              * Design and maintain competition platforms and judge the participant works.
 
   # Education
   education:
