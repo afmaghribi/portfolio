@@ -214,35 +214,39 @@ params:
               * Execute configuration changes at the production level of private cloud components.
               * Assist other teams when making configuration changes at the production level that impact the cloud environment.
               * Provide direction and guidance to L1 Cloud Engineers.
+              * Monitor every action L1 Cloud Engineers take in the private cloud environment.
               * Troubleshoot critical issues that cannot be resolved by L1 Cloud Engineers.
           - name: "L1 Cloud Operation Engineer at Btech"
             date: "Jun 2021 - Aug 2023"
             content: |-
-              * Managed private cloud using OpenStack (IaaS), Ceph (Storage), and Prometheus/Grafana (Monitoring).
-              * Deployed and maintained Kubernetes clusters within the cloud environment.
-              * Automated repetitive tasks using Bash, Python, and Ansible.
-              * Performed RCA (Root Cause Analysis) for any issues in the private cloud components.
+              * Managed private cloud using OpenStack (IaaS), Ceph (Storage Cluster), Grafana & Prometheus/Victoriametrics, Graylog & Elasticsearch, Zabbix, Juju (Deployment tool), and MAAS (Physical server management).
+              * Deployed, configured, and maintained Kubernetes clusters inside the cloud environment.
+              * Monitored all private cloud components, anticipated and mitigated risks within defined SLAs, and generated monthly reports.
+              * Responded to alerts from monitoring systems and coordinated with developer, network, or hardware teams for issue resolution.
+              * Researched to optimize cloud resource utilization, balancing performance or enabling/changing features, and created Technical Documents (TD) and Methods of Procedure (MOP).
+              * Troubleshot and created Root Cause Analysis (RCA) for any issues in the private cloud components.
+              * Automated repetitive tasks using Bash, Python, or Ansible.
           - name: "Mentor and Instructor at ADINUSA"
             date: "Jul 2021 - Jan 2023"
             content: |-
-              * Taking part as mentor and instructor in CompTIA Network+, Linux+, Security+ and PenTest+ courses for students.
-              * Instructor for LFCA and LFCS courses for professional audiences.
+              * Acted as a mentor and instructor for CompTIA Network+, Linux+, Security+, and PenTest+ courses for Vocational High School and Undergraduate students.
+              * Instructor for LFCA (Linux Foundation Certified IT Associate) and LFCS (Linux Foundation Certified System Administrator) courses for professional audiences.
           - name: "Network Engineer at PT. Graha Karya Informasi"
             date: "Aug 2019 - Dec 2019"
             content: |-
-              * Installation, maintenance and dismantle IT network appliances in the branch office.
+              * Installation, maintenance, and dismantling of IT network appliances in branch offices.
 
       - company: "Internship"
         jobs:
           - name: "Core Network Operation at PT Telkom Indonesia"
             date: "Aug 2020 - Sep 2020"
             content: |-
-              * Learning backbone enterprise grade network appliances, topology and monitoring tools.
+              * Learned backbone enterprise-grade network appliances, topology, and monitoring tools.
           - name: "Network Engineer at BLC Telkom - KPLI Klaten"
             date: "Nov 2015 - Feb 2016"
             content: |-
-              * Learning about computer networking, wireless networking, cloud computing and system administration.
-              * Installation network appliances and helping training high school student for final practical test.
+              * Learned about computer networking, wireless networking, cloud computing, and system administration.
+              * Installed network appliances and assisted in training high school students for their final practical tests.
 
       - company: "Projects"
         jobs:
@@ -276,6 +280,22 @@ params:
           * Graduated in 7 semesters with cum laude honor.
           * Head of Internetworking subdivision unit in IPTEK student activity unit.
           * Laboratory assistant for Advanced Programming, Computer Networking, and Network Security subjects.
+      - title: "Google Get Certified Program - Professional Cloud Engineer"
+        school:
+          name: "Google Cloud Training"
+        date: "Nov - Dec 2025"
+      - title: "Cloud Native Developer IT Professional Program"
+        school:
+          name: "IT Professional Training"
+        date: "May - Oct 2024"
+      - title: "Digitalent Scholarship - AWS Cloud Operations / Developing"
+        school:
+          name: "Ministry of Communication and Informatics"
+        date: "2021 - 2022"
+      - title: "Red Hat OpenStack Administrator Training"
+        school:
+          name: "Digitalent Scholarship"
+        date: "Jul - Sep 2020"
 
   # Achievements
   achievements:
