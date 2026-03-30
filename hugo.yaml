@@ -370,12 +370,12 @@ params:
           - "Pwn"
           - "Binary Exploitation"
 
-      - title: 0byteCTF 2023 & 2024
-        content: Created cybersecurity challenges for the pwn/binary exploitation category for the public audience of the Zerobyte.id Community.
+      - title: 0byteCTF 2024
+        content: Created cybersecurity challenges for the pwn/binary exploitation category for the Zerobyte.id Community public competition.
         image: /images/projects/converter.jpg
         badges:
           - "CTF"
-          - "Cybersecurity"
+          - "Binary Exploitation"
 
       - title: Compfest CTF 2023
         content: Created cybersecurity challenges for the pwn/binary exploitation category for the undergraduate student competition by University of Indonesia.
@@ -384,16 +384,30 @@ params:
           - "CTF"
           - "Binary Exploitation"
 
-      - title: Cyber Security Hackathon
-        content: Challenge Author and Judge for InfraDigital Foundation's cybersecurity competitions (2022-2023).
+      - title: 0byteCTF 2023
+        content: Created cybersecurity challenges for the pwn/binary exploitation category for the Zerobyte.id Community public competition.
+        image: /images/projects/converter.jpg
+        badges:
+          - "CTF"
+          - "Binary Exploitation"
+
+      - title: Cyber Security Hackathon 2023
+        content: Challenge Author and Judge for InfraDigital Foundation's cybersecurity competition (U-Connect).
         image: /images/projects/profile2.jpg
         badges:
-          - "Mentorship"
+          - "Judge"
           - "Cybersecurity"
 
       - title: LKS Cyber Security Bogor 2023
         content: Challenge Author and Judge for the high school cybersecurity competition in Bogor Regency.
         image: /images/projects/profile.png
+        badges:
+          - "Judge"
+          - "Cybersecurity"
+
+      - title: Cyber Security Hackathon 2022
+        content: Challenge Author and Judge for the InfraDigital Foundation's cybersecurity competition.
+        image: /images/projects/profile2.jpg
         badges:
           - "Judge"
           - "Cybersecurity"
