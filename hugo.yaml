@@ -337,98 +337,75 @@ params:
           name: "Ministry of Communication and Informatics"
         date: "Oct 2019"
 
-  # Achievements
-  achievements:
+  # Certifications
+  certifications:
     enable: true
-    title: "Certifications"
+    title: "Professional Certifications"
     items:
       - title: "GCP Professional Cloud Engineer"
-        content: "Certified Google Cloud Professional Cloud Engineer"
-        url: "https://www.credly.com/users/afmaghribi"
-        image: /images/achievement.jpg
-      - title: "Certified Kubernetes Specialist (CKS)"
-        content: "Cloud Native Computing Foundation (CNCF)"
-        url: "https://www.credly.com/users/afmaghribi"
-        image: /images/achievement.jpg
-      - title: "Certified Kubernetes Administrator (CKA)"
-        content: "Cloud Native Computing Foundation (CNCF)"
+        content: "Google Cloud Platform - Issued Feb 2026"
         url: "https://www.credly.com/users/afmaghribi"
         image: /images/achievement.jpg
       - title: "Certified Kubernetes Application Developer (CKAD)"
-        content: "Cloud Native Computing Foundation (CNCF)"
+        content: "CNCF / Linux Foundation - Issued Oct 2024"
+        url: "https://www.credly.com/users/afmaghribi"
+        image: /images/achievement.jpg
+      - title: "GCP Associate Cloud Engineer"
+        content: "Google Cloud Platform - Issued July 2024"
+        url: "https://www.credly.com/users/afmaghribi"
+        image: /images/achievement.jpg
+      - title: "Certified Kubernetes Security Specialist (CKS)"
+        content: "CNCF / Linux Foundation - Issued June 2023"
+        url: "https://www.credly.com/users/afmaghribi"
+        image: /images/achievement.jpg
+      - title: "Certified Kubernetes Administrator (CKA)"
+        content: "CNCF / Linux Foundation - Issued June 2023"
         url: "https://www.credly.com/users/afmaghribi"
         image: /images/achievement.jpg
       - title: "Certificate of Cloud Security Knowledge (CCSK)"
-        content: "Cloud Security Alliance"
+        content: "Cloud Security Alliance - Issued Feb 2023"
         url: "https://www.credly.com/users/afmaghribi"
         image: /images/achievement.jpg
-      - title: "CompTIA PenTest+"
-        content: "CompTIA Cybersecurity Career Pathway"
-        image: /images/achievement.jpg
-      - title: "Alibaba Cloud Professional (ACP)"
-        content: "ACP Cloud Computing"
+      - title: "Alibaba Cloud Professional (ACP) Cloud Computing"
+        content: "Alibaba Cloud - Issued Jan 2022"
         image: /images/achievement.jpg
       - title: "AWS Certified Cloud Practitioner"
-        content: "Amazon Web Services"
+        content: "Amazon Web Services - Issued Oct 2021"
         image: /images/achievement.jpg
+      - title: "CompTIA PenTest+"
+        content: "CompTIA - Issued Sep 2021"
+        image: /images/achievement.jpg
+      - title: "Alibaba Cloud Associate (ACA) Cloud Computing"
+        content: "Alibaba Cloud - Issued Nov 2020"
+      - title: "Alibaba Cloud Associate (ACA) Cloud Security"
+        content: "Alibaba Cloud - Issued Nov 2020"
+      - title: "HCIA Routing & Switching"
+        content: "Huawei - Issued Aug 2020"
+      - title: "HCIA Cloud Computing"
+        content: "Huawei - Issued Aug 2020"
+      - title: "Certified Secure Computer User (CSCU)"
+        content: "EC-Council - Issued Dec 2019"
+      - title: "MikroTik Certified Routing Engineer (MTCRE)"
+        content: "MikroTik - Issued Oct 2019"
+      - title: "MikroTik Certified Network Associate (MTCNA)"
+        content: "MikroTik - Issued Oct 2019"
+      - title: "JLPT N5"
+        content: "Japanese Language Proficiency Test - Issued Jan 2019"
 
-  # projects
-  projects:
+  # Achievements
+  achievements:
     enable: true
-    # title: "Custom Name"
+    title: "Competition Achievements"
     items:
-      - title: TSA Cyber Champion 2024
-        content: Challenge Author for pwn/binary exploitation category for the national competition organized by Ministry of Communication and Informatics.
-        image: /images/projects/profile.png
-        featured:
-          name: Challenge Author
-          link: "#"
-        badges:
-          - "Cybersecurity"
-          - "Pwn"
-          - "Binary Exploitation"
-
-      - title: 0byteCTF 2024
-        content: Created cybersecurity challenges for the pwn/binary exploitation category for the Zerobyte.id Community public competition.
-        image: /images/projects/converter.jpg
-        badges:
-          - "CTF"
-          - "Binary Exploitation"
-
-      - title: Compfest CTF 2023
-        content: Created cybersecurity challenges for the pwn/binary exploitation category for the undergraduate student competition by University of Indonesia.
-        image: /images/projects/profile.png
-        badges:
-          - "CTF"
-          - "Binary Exploitation"
-
-      - title: 0byteCTF 2023
-        content: Created cybersecurity challenges for the pwn/binary exploitation category for the Zerobyte.id Community public competition.
-        image: /images/projects/converter.jpg
-        badges:
-          - "CTF"
-          - "Binary Exploitation"
-
-      - title: Cyber Security Hackathon 2023
-        content: Challenge Author and Judge for InfraDigital Foundation's cybersecurity competition (U-Connect).
-        image: /images/projects/profile2.jpg
-        badges:
-          - "Judge"
-          - "Cybersecurity"
-
-      - title: LKS Cyber Security Bogor 2023
-        content: Challenge Author and Judge for the high school cybersecurity competition in Bogor Regency.
-        image: /images/projects/profile.png
-        badges:
-          - "Judge"
-          - "Cybersecurity"
-
-      - title: Cyber Security Hackathon 2022
-        content: Challenge Author and Judge for the InfraDigital Foundation's cybersecurity competition.
-        image: /images/projects/profile2.jpg
-        badges:
-          - "Judge"
-          - "Cybersecurity"
+      - title: "Cyber Breaker Development"
+        content: "Finalist - Top 30 Individual at National Competition for public and professionals. Solved Digital forensics and binary exploitation challenges. (Aug 2025)"
+        image: /images/achievement.jpg
+      - title: "Gemastik XIII Cyber Security Division"
+        content: "Finalist - Top 15 Team at National competition for computer science undergraduate student. Solved cryptography, reverse engineering and binary exploitation challenges. (Nov 2020)"
+        image: /images/achievement.jpg
+      - title: "Finalist National Mikrotik Networking Olympiad"
+        content: "Finalist - Top 10 Team at National competition for vocational high school student. (Oct 2016)"
+        image: /images/achievement.jpg
 
   #Contact
   contact:
