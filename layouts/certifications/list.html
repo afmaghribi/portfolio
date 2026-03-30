@@ -5,7 +5,7 @@ Certification | Ahmad Fauzzan Maghribi
 {{ define "main" }}
 <div class="container py-5">
     <div class="text-center mb-5">
-        <h1 class="display-4 fw-bold mb-3">{{ .Title }}</h1>
+        <h1 class="display-4 fw-bold mb-3">Certifications</h1>
         {{- $cert_param := .Site.Params.certifications -}}
         {{ if $cert_param.credlyUrl }}
         <a href="{{ $cert_param.credlyUrl }}" target="_blank" class="btn btn-outline-primary rounded-pill px-4 py-2 shadow-sm">
@@ -18,14 +18,14 @@ Certification | Ahmad Fauzzan Maghribi
     <div class="row justify-content-center">
         {{ range $paginator.Pages }}
         <div class="col-6 col-md-4 col-lg-4 my-4">
-            <div class="cert-card text-center h-100 p-3 bg-white border border-light shadow-sm rounded-3">
+            <div class="cert-card text-center h-100 p-3 shadow-sm rounded-3">
                 {{ if .Params.url_credly }}
                 <a href="{{ .Params.url_credly }}" target="_blank" class="text-decoration-none">
                 {{ end }}
                     <div class="cert-badge-wrapper mb-3">
                         <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="img-fluid cert-badge-img">
                     </div>
-                    <h5 class="cert-title text-dark fw-semibold small">{{ .Title }}</h5>
+                    <h5 class="cert-title fw-semibold small">{{ .Title }}</h5>
                     <p class="cert-meta text-muted extra-small mb-3">{{ .Params.certificate_org }}</p>
                     
                     {{ if .Params.url_credly }}
@@ -78,7 +78,8 @@ Certification | Ahmad Fauzzan Maghribi
 <style>
     .cert-card {
         transition: all 0.3s ease;
-        border: 1px solid #e0e0e0 !important;
+        border: 2px solid var(--text-secondary-color) !important;
+        background-color: var(--secondary-color) !important;
     }
     .cert-card:hover {
         transform: translateY(-5px);
@@ -99,15 +100,22 @@ Certification | Ahmad Fauzzan Maghribi
         display: flex;
         align-items: center;
         justify-content: center;
+        color: var(--text-color) !important;
+    }
+    .cert-meta {
+        color: var(--text-secondary-color) !important;
     }
     .pagination .page-link {
         color: var(--primary-color);
+        background-color: var(--secondary-color);
+        border-color: var(--text-secondary-color);
         border-radius: 0.5rem;
         margin: 0 3px;
     }
     .pagination .page-item.active .page-link {
         background-color: var(--primary-color);
         border-color: var(--primary-color);
+        color: var(--secondary-color);
     }
 </style>
 {{ end }}
