@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Ahmad Fauzzan Maghribi</title>
+    <link>http://localhost:1313/es/blogs/</link>
+    <description>Recent content in Blogs on Ahmad Fauzzan Maghribi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 09 Dec 2022 19:53:33 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/es/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Renderizar Matemáticas con Mathjax</title>
+      <link>http://localhost:1313/es/blogs/math/</link>
+      <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
+      <guid>http://localhost:1313/es/blogs/math/</guid>
+      <description>Mathjax Las ecuaciones matemáticas se pueden renderizar usando la sintaxis de Mathjax con soporte de símbolos AMS.&#xA;Opcionalmente, habilita esto por página agregando mathjax: true a tu frontmatter.&#xA;Luego, usa $$ ... $$ en una línea por sí sola para renderizar una ecuación de bloque:&#xA;$$ | Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow P_{2}} [A(x) = 1] | &amp;lt; \text{negligible} $$&#xA;La versión sin procesar es:&#xA;$$ | Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow P_{2}} [A(x) = 1] | &amp;lt; \text{negligible} $$ Escribe ecuaciones en línea con \\( .</description>
+    </item>
+    <item>
+      <title>Sintaxis de Markdown</title>
+      <link>http://localhost:1313/es/blogs/markdown-syntax/</link>
+      <pubDate>Sat, 03 Apr 2021 23:29:21 +0530</pubDate>
+      <guid>http://localhost:1313/es/blogs/markdown-syntax/</guid>
+      <description>Párrafo Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga.</description>
+    </item>
+    <item>
+      <title>Soporte de Emoji</title>
+      <link>http://localhost:1313/es/blogs/emoji-support/</link>
+      <pubDate>Sat, 03 Apr 2021 22:53:58 +0530</pubDate>
+      <guid>http://localhost:1313/es/blogs/emoji-support/</guid>
+      <description>Los emoji se pueden habilitar en un proyecto Hugo de varias maneras. :zap:&#xA;Soporte de Emoji La función emojify se puede llamar directamente en las plantillas o Shortcodes en línea.&#xA;Para habilitar emoji globalmente, establece enableEmoji en true en la configuración de tu sitio y luego puedes escribir códigos abreviados de emoji directamente en los archivos de contenido; por ejemplo:&#xA;La Hoja de trucos de Emoji es una referencia útil para los códigos abreviados de emoji.</description>
+    </item>
+    <item>
+      <title>Texto de Relleno</title>
+      <link>http://localhost:1313/es/blogs/placeholder-text/</link>
+      <pubDate>Sat, 03 Apr 2021 22:41:10 +0530</pubDate>
+      <guid>http://localhost:1313/es/blogs/placeholder-text/</guid>
+      <description>Lorem est tota propiore conpellat pectoribus de pectora summo.&#xA;Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.&#xA;Exierant elisi ambit vivere dedere Duce pollice Eris modo Spargitque ferrea quos palude Rursus nulli murmur; hastile inridet ut ab gravi sententia!</description>
+    </item>
+    <item>
+      <title>Contenido Enriquecido</title>
+      <link>http://localhost:1313/es/blogs/rich-content/</link>
+      <pubDate>Sat, 03 Apr 2021 19:53:33 +0530</pubDate>
+      <guid>http://localhost:1313/es/blogs/rich-content/</guid>
+      <description>Hugo viene con varios Shortcodes Integrados para contenido enriquecido, junto con una Configuración de Privacidad y un conjunto de Shortcodes Simples que habilitan versiones estáticas y sin JS de varias incrustaciones de redes sociales.&#xA;Shortcode Simple de X {{&amp;lt; tweet user=&amp;#34;GoHugoIO&amp;#34; id=&amp;#34;1315233626070503424&amp;#34; &amp;gt;}} Shortcode Simple de Vimeo {{&amp;lt; vimeo 146022717 &amp;gt;}} Shortcode gist {{&amp;lt; gist spf13 7896402 &amp;gt;}} </description>
+    </item>
+  </channel>
+</rss>
