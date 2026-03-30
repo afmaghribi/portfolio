@@ -280,22 +280,36 @@ params:
   # Achievements
   achievements:
     enable: true
-    # title: "Custom Name"
+    title: "Certifications"
     items:
       - title: "GCP Professional Cloud Engineer"
         content: "Certified Google Cloud Professional Cloud Engineer"
         url: "https://www.credly.com/users/afmaghribi"
         image: /images/achievement.jpg
-      - title: "Kubernetes Specialist (CKS, CKA, CKAD)"
-        content: "Certified Kubernetes Security Specialist, Administrator, and Application Developer"
+      - title: "Certified Kubernetes Specialist (CKS)"
+        content: "Cloud Native Computing Foundation (CNCF)"
         url: "https://www.credly.com/users/afmaghribi"
         image: /images/achievement.jpg
-      - title: "Cloud Security Knowledge (CCSK)"
-        content: "Certificate of Cloud Security Knowledge v4"
+      - title: "Certified Kubernetes Administrator (CKA)"
+        content: "Cloud Native Computing Foundation (CNCF)"
+        url: "https://www.credly.com/users/afmaghribi"
+        image: /images/achievement.jpg
+      - title: "Certified Kubernetes Application Developer (CKAD)"
+        content: "Cloud Native Computing Foundation (CNCF)"
+        url: "https://www.credly.com/users/afmaghribi"
+        image: /images/achievement.jpg
+      - title: "Certificate of Cloud Security Knowledge (CCSK)"
+        content: "Cloud Security Alliance"
         url: "https://www.credly.com/users/afmaghribi"
         image: /images/achievement.jpg
       - title: "CompTIA PenTest+"
-        content: "CompTIA PenTest+ Certified"
+        content: "CompTIA Cybersecurity Career Pathway"
+        image: /images/achievement.jpg
+      - title: "Alibaba Cloud Professional (ACP)"
+        content: "ACP Cloud Computing"
+        image: /images/achievement.jpg
+      - title: "AWS Certified Cloud Practitioner"
+        content: "Amazon Web Services"
         image: /images/achievement.jpg
 
   # projects
@@ -321,11 +335,25 @@ params:
           - "CTF"
           - "Cybersecurity"
 
+      - title: Compfest CTF 2023
+        content: Created cybersecurity challenges for the pwn/binary exploitation category for the undergraduate student competition by University of Indonesia.
+        image: /images/projects/profile.png
+        badges:
+          - "CTF"
+          - "Binary Exploitation"
+
       - title: Cyber Security Hackathon
         content: Challenge Author and Judge for InfraDigital Foundation's cybersecurity competitions (2022-2023).
         image: /images/projects/profile2.jpg
         badges:
           - "Mentorship"
+          - "Cybersecurity"
+
+      - title: LKS Cyber Security Bogor 2023
+        content: Challenge Author and Judge for the high school cybersecurity competition in Bogor Regency.
+        image: /images/projects/profile.png
+        badges:
+          - "Judge"
           - "Cybersecurity"
 
   #Contact
