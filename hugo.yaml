@@ -33,11 +33,7 @@ outputs:
   page:
     - "HTML"
     - "RSS"
-
     - "JSON"
-  page:
-    - "HTML"
-    - "RSS"
 
 enableRobotsTXT: true
 

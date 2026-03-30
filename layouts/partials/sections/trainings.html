@@ -1,10 +1,10 @@
-{{ if .Site.Params.trainings.enable | default false }}
-{{- $trainings := .Site.Language.Params.trainings | default .Site.Params.trainings -}}
+{{ if .Site.Params.trainings.enable }}
+{{- $trainings := .Site.Params.trainings -}}
 <section id="trainings" class="py-5">
     <div class="container">
-        <h3 class="text-center">{{ $trainings.title | default .Site.Params.trainings.title | default "Professional Training" }}</h3>
+        <h3 class="text-center">{{ $trainings.title | default "Professional Training" }}</h3>
         <div class="row justify-content-center py-5">
-            {{ range $index, $element := $trainings.items | default .Site.Params.trainings.items }}
+            {{ range $trainings.items }}
             <div class="col-12 p-0">
                 <div class="row row align-items-center justify-content-center m-1 mb-4">
                     <div class="col-md-9">
@@ -38,3 +38,4 @@
     </div>
 </section>
 {{ end }}
+
