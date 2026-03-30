@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Certified Secure Computer User (CSCU) on Ahmad Fauzzan Maghribi</title>
-    <link>http://localhost:1313/certifications/certified-secure-computer-user-cscu/</link>
+    <link>https://lychnobyte.my.id/certifications/certified-secure-computer-user-cscu/</link>
     <description>Recent content in Certified Secure Computer User (CSCU) on Ahmad Fauzzan Maghribi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/certifications/certified-secure-computer-user-cscu/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lychnobyte.my.id/certifications/certified-secure-computer-user-cscu/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
