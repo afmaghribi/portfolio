@@ -9,20 +9,6 @@
     <lastBuildDate>Fri, 09 Dec 2022 19:53:33 +0530</lastBuildDate>
     <atom:link href="https://lychnobyte.my.id/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AWS Certified Cloud Practitioner</title>
-      <link>https://lychnobyte.my.id/certifications/aws-certified-cloud-practitioner/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/aws-certified-cloud-practitioner/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Certified Secure Computer User (CSCU)</title>
-      <link>https://lychnobyte.my.id/certifications/certified-secure-computer-user-cscu/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/certified-secure-computer-user-cscu/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Certified Kubernetes Security Specialist (CKS)</title>
       <link>https://lychnobyte.my.id/certifications/certified-kubernetes-security-specialist-cks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -58,6 +44,13 @@
       <description></description>
     </item>
     <item>
+      <title>AWS Certified Cloud Practitioner</title>
+      <link>https://lychnobyte.my.id/certifications/aws-certified-cloud-practitioner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/certifications/aws-certified-cloud-practitioner/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Certificate of Cloud Security Knowledge (CCSK) v4</title>
       <link>https://lychnobyte.my.id/certifications/certificate-of-cloud-security-knowledge-ccsk-v4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -69,6 +62,13 @@
       <link>https://lychnobyte.my.id/certifications/comptia-pentestplus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lychnobyte.my.id/certifications/comptia-pentestplus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certified Secure Computer User (CSCU)</title>
+      <link>https://lychnobyte.my.id/certifications/certified-secure-computer-user-cscu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/certifications/certified-secure-computer-user-cscu/</guid>
       <description></description>
     </item>
     <item>

@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>HCIA Routing &amp; Switching on Ahmad Fauzzan Maghribi</title>
-    <link>https://lychnobyte.my.id/certifications/hcia-routing--switching/</link>
+    <link>http://localhost:1313/certifications/hcia-routing--switching/</link>
     <description>Recent content in HCIA Routing &amp; Switching on Ahmad Fauzzan Maghribi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="https://lychnobyte.my.id/certifications/hcia-routing--switching/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/certifications/hcia-routing--switching/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

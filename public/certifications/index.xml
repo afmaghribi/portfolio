@@ -2,128 +2,128 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Certification | Ahmad Fauzzan Maghribi on Ahmad Fauzzan Maghribi</title>
-    <link>https://lychnobyte.my.id/certifications/</link>
+    <link>http://localhost:1313/certifications/</link>
     <description>Recent content in Certification | Ahmad Fauzzan Maghribi on Ahmad Fauzzan Maghribi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="https://lychnobyte.my.id/certifications/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/certifications/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AWS Certified Cloud Practitioner</title>
-      <link>https://lychnobyte.my.id/certifications/aws-certified-cloud-practitioner/</link>
+      <link>http://localhost:1313/certifications/aws-certified-cloud-practitioner/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/aws-certified-cloud-practitioner/</guid>
+      <guid>http://localhost:1313/certifications/aws-certified-cloud-practitioner/</guid>
       <description></description>
     </item>
     <item>
       <title>Certified Secure Computer User (CSCU)</title>
-      <link>https://lychnobyte.my.id/certifications/certified-secure-computer-user-cscu/</link>
+      <link>http://localhost:1313/certifications/certified-secure-computer-user-cscu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/certified-secure-computer-user-cscu/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Certified Kubernetes Security Specialist (CKS)</title>
-      <link>https://lychnobyte.my.id/certifications/certified-kubernetes-security-specialist-cks/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/certified-kubernetes-security-specialist-cks/</guid>
+      <guid>http://localhost:1313/certifications/certified-secure-computer-user-cscu/</guid>
       <description></description>
     </item>
     <item>
       <title>Certified Kubernetes Administrator (CKA)</title>
-      <link>https://lychnobyte.my.id/certifications/certified-kubernetes-administrator-cka/</link>
+      <link>http://localhost:1313/certifications/certified-kubernetes-administrator-cka/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/certified-kubernetes-administrator-cka/</guid>
+      <guid>http://localhost:1313/certifications/certified-kubernetes-administrator-cka/</guid>
       <description></description>
     </item>
     <item>
       <title>Certified Kubernetes Application Developer (CKAD)</title>
-      <link>https://lychnobyte.my.id/certifications/certified-kubernetes-application-developer-ckad/</link>
+      <link>http://localhost:1313/certifications/certified-kubernetes-application-developer-ckad/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/certified-kubernetes-application-developer-ckad/</guid>
+      <guid>http://localhost:1313/certifications/certified-kubernetes-application-developer-ckad/</guid>
       <description></description>
     </item>
     <item>
       <title>GCP Professional Cloud Engineer</title>
-      <link>https://lychnobyte.my.id/certifications/gcp-professional-cloud-engineer/</link>
+      <link>http://localhost:1313/certifications/gcp-professional-cloud-engineer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/gcp-professional-cloud-engineer/</guid>
+      <guid>http://localhost:1313/certifications/gcp-professional-cloud-engineer/</guid>
       <description></description>
     </item>
     <item>
       <title>GCP Associate Cloud Engineer</title>
-      <link>https://lychnobyte.my.id/certifications/gcp-associate-cloud-engineer/</link>
+      <link>http://localhost:1313/certifications/gcp-associate-cloud-engineer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/gcp-associate-cloud-engineer/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Certificate of Cloud Security Knowledge (CCSK) v4</title>
-      <link>https://lychnobyte.my.id/certifications/certificate-of-cloud-security-knowledge-ccsk-v4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/certificate-of-cloud-security-knowledge-ccsk-v4/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CompTIA PenTest&#43;</title>
-      <link>https://lychnobyte.my.id/certifications/comptia-pentestplus/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/comptia-pentestplus/</guid>
+      <guid>http://localhost:1313/certifications/gcp-associate-cloud-engineer/</guid>
       <description></description>
     </item>
     <item>
       <title>Alibaba Cloud Professional (ACP) Cloud Computing</title>
-      <link>https://lychnobyte.my.id/certifications/alibaba-cloud-professional-acp-cloud-computing/</link>
+      <link>http://localhost:1313/certifications/alibaba-cloud-professional-acp-cloud-computing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/alibaba-cloud-professional-acp-cloud-computing/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Alibaba Cloud Associate (ACA) Cloud Computing</title>
-      <link>https://lychnobyte.my.id/certifications/alibaba-cloud-associate-aca-cloud-computing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/alibaba-cloud-associate-aca-cloud-computing/</guid>
+      <guid>http://localhost:1313/certifications/alibaba-cloud-professional-acp-cloud-computing/</guid>
       <description></description>
     </item>
     <item>
       <title>Alibaba Cloud Associate (ACA) Cloud Security</title>
-      <link>https://lychnobyte.my.id/certifications/alibaba-cloud-associate-aca-cloud-security/</link>
+      <link>http://localhost:1313/certifications/alibaba-cloud-associate-aca-cloud-security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/alibaba-cloud-associate-aca-cloud-security/</guid>
+      <guid>http://localhost:1313/certifications/alibaba-cloud-associate-aca-cloud-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certificate of Cloud Security Knowledge (CCSK) v4</title>
+      <link>http://localhost:1313/certifications/certificate-of-cloud-security-knowledge-ccsk-v4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/certificate-of-cloud-security-knowledge-ccsk-v4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CompTIA PenTest&#43;</title>
+      <link>http://localhost:1313/certifications/comptia-pentestplus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/comptia-pentestplus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Alibaba Cloud Associate (ACA) Cloud Computing</title>
+      <link>http://localhost:1313/certifications/alibaba-cloud-associate-aca-cloud-computing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/alibaba-cloud-associate-aca-cloud-computing/</guid>
       <description></description>
     </item>
     <item>
       <title>HCIA Routing &amp; Switching</title>
-      <link>https://lychnobyte.my.id/certifications/hcia-routing--switching/</link>
+      <link>http://localhost:1313/certifications/hcia-routing--switching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/hcia-routing--switching/</guid>
+      <guid>http://localhost:1313/certifications/hcia-routing--switching/</guid>
       <description></description>
     </item>
     <item>
       <title>HCIA Cloud Computing</title>
-      <link>https://lychnobyte.my.id/certifications/hcia-cloud-computing/</link>
+      <link>http://localhost:1313/certifications/hcia-cloud-computing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/hcia-cloud-computing/</guid>
+      <guid>http://localhost:1313/certifications/hcia-cloud-computing/</guid>
       <description></description>
     </item>
     <item>
       <title>MikroTik Certified Routing Engineer (MTCRE)</title>
-      <link>https://lychnobyte.my.id/certifications/mikrotik-certified-routing-engineer-mtcre/</link>
+      <link>http://localhost:1313/certifications/mikrotik-certified-routing-engineer-mtcre/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/mikrotik-certified-routing-engineer-mtcre/</guid>
+      <guid>http://localhost:1313/certifications/mikrotik-certified-routing-engineer-mtcre/</guid>
       <description></description>
     </item>
     <item>
       <title>MikroTik Certified Network Associate (MTCNA)</title>
-      <link>https://lychnobyte.my.id/certifications/mikrotik-certified-network-associate-mtcna/</link>
+      <link>http://localhost:1313/certifications/mikrotik-certified-network-associate-mtcna/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/mikrotik-certified-network-associate-mtcna/</guid>
+      <guid>http://localhost:1313/certifications/mikrotik-certified-network-associate-mtcna/</guid>
       <description></description>
     </item>
     <item>
       <title>JLPT N5</title>
-      <link>https://lychnobyte.my.id/certifications/jlpt-n5/</link>
+      <link>http://localhost:1313/certifications/jlpt-n5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lychnobyte.my.id/certifications/jlpt-n5/</guid>
+      <guid>http://localhost:1313/certifications/jlpt-n5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certified Kubernetes Security Specialist (CKS)</title>
+      <link>http://localhost:1313/certifications/certified-kubernetes-security-specialist-cks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/certified-kubernetes-security-specialist-cks/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,10 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://lychnobyte.my.id/certifications/aws-certified-cloud-practitioner/</loc>
-  </url><url>
-    <loc>https://lychnobyte.my.id/certifications/certified-secure-computer-user-cscu/</loc>
-  </url><url>
     <loc>https://lychnobyte.my.id/certifications/certified-kubernetes-security-specialist-cks/</loc>
   </url><url>
     <loc>https://lychnobyte.my.id/certifications/certified-kubernetes-administrator-cka/</loc>
@@ -16,9 +12,13 @@
   </url><url>
     <loc>https://lychnobyte.my.id/certifications/gcp-associate-cloud-engineer/</loc>
   </url><url>
+    <loc>https://lychnobyte.my.id/certifications/aws-certified-cloud-practitioner/</loc>
+  </url><url>
     <loc>https://lychnobyte.my.id/certifications/certificate-of-cloud-security-knowledge-ccsk-v4/</loc>
   </url><url>
     <loc>https://lychnobyte.my.id/certifications/comptia-pentestplus/</loc>
+  </url><url>
+    <loc>https://lychnobyte.my.id/certifications/certified-secure-computer-user-cscu/</loc>
   </url><url>
     <loc>https://lychnobyte.my.id/certifications/alibaba-cloud-professional-acp-cloud-computing/</loc>
   </url><url>
