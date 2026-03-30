@@ -1,44 +1,56 @@
 {{ define "main" }}
 <div class="container py-5">
-    <h1 class="text-center mb-5">{{ .Title }}</h1>
-    {{- $certifications := .Site.Params.certifications -}}
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold mb-3">{{ .Title }}</h1>
+        {{- $cert := .Site.Params.certifications -}}
+        {{ if $cert.credlyUrl }}
+        <a href="{{ $cert.credlyUrl }}" target="_blank" class="btn btn-outline-primary rounded-pill px-4 py-2 shadow-sm">
+            <i class="fas fa-award me-2"></i>View on Credly
+        </a>
+        {{ end }}
+    </div>
+
     <div class="row justify-content-center">
-        {{ range $certifications.items }}
-        <div class="col-lg-4 col-md-6 my-3">
-            {{ if .url }}
-            <a class="card my-3 h-100 p-3 shadow-sm border-0" href="{{ .url }}" title="{{ .title }}" target="_blank" style="text-decoration: none; transition: transform 0.2s;">
-                {{ if .image }}
-                <div class="card-head text-center">
-                    <img class="img-fluid mb-3" src="{{ .image | relURL }}" style="max-height: 100px;">
-                </div>
+        {{ range $cert.items }}
+        <div class="col-6 col-md-4 col-lg-3 my-4">
+            <div class="cert-card text-center h-100 px-2">
+                {{ if .url }}
+                <a href="{{ .url }}" target="_blank" class="text-decoration-none">
                 {{ end }}
-                <div class="card-body p-0 text-center">
-                    <h5 class="card-title text-dark">{{ .title }}</h5>
-                    <p class="card-text text-muted small">{{ .content }}</p>
-                </div>
-            </a>
-            {{ else }}
-            <div class="card my-3 h-100 p-3 shadow-sm border-0 text-center">
-                {{ if .image }}
-                <div class="card-head">
-                    <img class="img-fluid mb-3" src="{{ .image | relURL }}" style="max-height: 100px;">
-                </div>
+                    <div class="cert-badge-wrapper mb-3">
+                        <img src="{{ .image | relURL }}" alt="{{ .title }}" class="img-fluid cert-badge-img shadow-sm rounded-circle p-2 bg-white">
+                    </div>
+                    <h5 class="cert-title text-dark fw-semibold small">{{ .title }}</h5>
+                    <p class="cert-meta text-muted extra-small">{{ .content }}</p>
+                {{ if .url }}
+                </a>
                 {{ end }}
-                <div class="card-body p-0">
-                    <h5 class="card-title text-dark">{{ .title }}</h5>
-                    <p class="card-text text-muted small">{{ .content }}</p>
-                </div>
             </div>
-            {{ end }}
         </div>
         {{ end }}
     </div>
 </div>
 
 <style>
-    .card:hover {
-        transform: translateY(-5px);
+    .cert-card {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .cert-card:hover {
+        transform: scale(1.05);
+    }
+    .cert-badge-img {
+        max-width: 140px;
+        transition: box-shadow 0.3s ease;
+    }
+    .cert-card:hover .cert-badge-img {
         box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+    .extra-small {
+        font-size: 0.75rem;
+    }
+    .cert-title {
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
     }
 </style>
 {{ end }}

@@ -308,6 +308,7 @@ params:
   certifications:
     enable: true
     title: "Professional Certifications"
+    credlyUrl: "https://www.credly.com/users/afmaghribi"
     items:
       - title: "GCP Professional Cloud Engineer"
         content: "Google Cloud Platform - Issued Feb 2026"
