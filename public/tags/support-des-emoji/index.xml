@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Support Des Emoji on Ahmad Fauzzan Maghribi</title><link>https://lychnobyte.my.id/tags/support-des-emoji/</link><description>Recent content in Support Des Emoji on Ahmad Fauzzan Maghribi</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 03 Apr 2021 22:53:58 +0530</lastBuildDate><atom:link href="https://lychnobyte.my.id/tags/support-des-emoji/index.xml" rel="self" type="application/rss+xml"/><item><title>Support des Emoji</title><link>https://lychnobyte.my.id/fr/blogs/emoji-support/</link><pubDate>Sat, 03 Apr 2021 22:53:58 +0530</pubDate><guid>https://lychnobyte.my.id/fr/blogs/emoji-support/</guid><description>Les emoji peuvent être activés dans un projet Hugo de plusieurs façons. :zap:
-Support des Emoji La fonction emojify peut être appelée directement dans les modèles ou les Shortcodes en ligne.
-Pour activer les emoji globalement, définissez enableEmoji sur true dans la configuration de votre site, puis vous pouvez taper les codes abrégés d&amp;rsquo;emoji directement dans les fichiers de contenu; par exemple :
-La Feuille de triche Emoji est une référence utile pour les codes abrégés d&amp;rsquo;emoji.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Support Des Emoji on Ahmad Fauzzan Maghribi</title>
+    <link>https://lychnobyte.my.id/tags/support-des-emoji/</link>
+    <description>Recent content in Support Des Emoji on Ahmad Fauzzan Maghribi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 03 Apr 2021 22:53:58 +0530</lastBuildDate>
+    <atom:link href="https://lychnobyte.my.id/tags/support-des-emoji/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Support des Emoji</title>
+      <link>https://lychnobyte.my.id/fr/blogs/emoji-support/</link>
+      <pubDate>Sat, 03 Apr 2021 22:53:58 +0530</pubDate>
+      <guid>https://lychnobyte.my.id/fr/blogs/emoji-support/</guid>
+      <description>Les emoji peuvent être activés dans un projet Hugo de plusieurs façons. :zap:&#xA;Support des Emoji La fonction emojify peut être appelée directement dans les modèles ou les Shortcodes en ligne.&#xA;Pour activer les emoji globalement, définissez enableEmoji sur true dans la configuration de votre site, puis vous pouvez taper les codes abrégés d&amp;rsquo;emoji directement dans les fichiers de contenu; par exemple :&#xA;La Feuille de triche Emoji est une référence utile pour les codes abrégés d&amp;rsquo;emoji.</description>
+    </item>
+  </channel>
+</rss>
