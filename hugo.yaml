@@ -253,16 +253,34 @@ params:
           - name: "Challenge Author at TSA Cyber Champion 2024"
             date: "Nov 2024 - Nov 2024"
             content: |-
-              * Create cybersecurity challenges for pwn/binary exploitation category for the national competition organized by Ministry of Communication and Informatics.
-          - name: "Challenge Author at 0byteCTF"
-            date: "Aug 2023 - Aug 2024"
+              * Created cybersecurity challenges for the pwn/binary exploitation category for the national competition organized by the Ministry of Communication and Informatics.
+          - name: "Challenge Author at 0byteCTF 2024"
+            date: "Aug 2024 - Aug 2024"
             content: |-
-              * Created cybersecurity challenges for the pwn/binary exploitation category for the Zerobyte.id Community.
-          - name: "Challenge Author & Judge at Cyber Security Hackathon"
-            date: "Oct 2022 - May 2023"
+              * Created cybersecurity challenges for the pwn/binary exploitation category for the public audience of the Zerobyte.id Community.
+          - name: "Challenge Author at Compfest CTF 2023"
+            date: "Sep 2023 - Sep 2023"
             content: |-
-              * Create cybersecurity challenges in several categories such as cryptography, reverse engineering, cloud native exploitation and binary exploitation.
-              * Design and maintain competition platforms and judge the participant works.
+              * Created cybersecurity challenges for the pwn/binary exploitation category for the undergraduate student competition by the University of Indonesia.
+          - name: "Challenge Author at 0byteCTF 2023"
+            date: "Aug 2023 - Aug 2023"
+            content: |-
+              * Created cybersecurity challenges for the pwn/binary exploitation category for the public audience of the Zerobyte.id Community.
+          - name: "Challenge Author & Judge at Cyber Security Hackathon 2023"
+            date: "Apr 2023 - May 2023"
+            content: |-
+              * Created cybersecurity challenges in several categories such as cryptography, reverse engineering, cloud-native exploitation, and binary exploitation.
+              * Designed and maintained the competition platform and judged participant works.
+          - name: "Challenge Author & Judge at LKS Cyber Security Bogor 2023"
+            date: "Apr 2023 - Apr 2023"
+            content: |-
+              * Created challenges in several categories such as cryptography, reverse engineering, network forensics, binary exploitation, and web exploitation.
+              * Created hardening server problems and tested participant works.
+          - name: "Challenge Author & Judge at Cyber Security Hackathon 2022"
+            date: "Oct 2022 - Nov 2022"
+            content: |-
+              * Created cybersecurity challenges in several categories such as cryptography, reverse engineering, digital forensics, and binary exploitation.
+              * Designed and maintained the competition platform and judged participant works.
 
   # Education
   education:
