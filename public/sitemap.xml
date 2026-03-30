@@ -161,6 +161,9 @@
     <loc>http://localhost:1313/certifications/04-certificate-of-cloud-security-knowledge-v-4/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/certifications/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/certifications/02-certified-kubernetes-administrator-cka/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -225,9 +228,6 @@
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/certifications/18-optimize-costs-for-google-kubernetes-engine/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/certifications/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/certifications/07-professional-cloud-architect-certification/</loc>

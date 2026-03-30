@@ -26,7 +26,13 @@ Certification | Ahmad Fauzzan Maghribi
                         <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="img-fluid cert-badge-img">
                     </div>
                     <h5 class="cert-title text-dark fw-semibold small">{{ .Title }}</h5>
-                    <p class="cert-meta text-muted extra-small">{{ .Params.certificate_org }}</p>
+                    <p class="cert-meta text-muted extra-small mb-3">{{ .Params.certificate_org }}</p>
+                    
+                    {{ if .Params.url_credly }}
+                    <div class="mt-auto">
+                        <span class="btn btn-sm btn-outline-info rounded-pill px-3" style="font-size: 0.7rem;">Verify</span>
+                    </div>
+                    {{ end }}
                 {{ if .Params.url_credly }}
                 </a>
                 {{ end }}
