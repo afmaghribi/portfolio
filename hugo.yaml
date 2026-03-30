@@ -14,16 +14,21 @@ languages:
     contentDir: "content"
     menu:
       main:
+        - identifier: certifications
+          name: Certifications
+          title: Professional Certifications
+          url: /certifications
+          weight: 1
         - identifier: blog
           name: Blog
           title: Blog posts
           url: /blogs
-          weight: 1
+          weight: 2
         - identifier: gallery
           name: Gallery
           title: Image gallery
           url: /gallery
-          weight: 2
+          weight: 3
 
 outputs:
   home:
