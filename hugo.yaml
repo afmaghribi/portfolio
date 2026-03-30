@@ -294,14 +294,30 @@ params:
         school:
           name: "IT Professional Training"
         date: "May - Oct 2024"
-      - title: "Digitalent Scholarship - AWS Cloud Operations / Developing"
+      - title: "Google Get Certified Program - Associate Cloud Engineer"
+        school:
+          name: "Google Cloud Training"
+        date: "April - June 2024"
+      - title: "Digitalent Scholarship - AWS Cloud Operations"
         school:
           name: "Ministry of Communication and Informatics"
-        date: "2021 - 2022"
-      - title: "Red Hat OpenStack Administrator Training"
+        date: "Sep - Oct 2022"
+      - title: "Digitalent Scholarship - AWS Cloud Developing"
         school:
-          name: "Digitalent Scholarship"
+          name: "Ministry of Communication and Informatics"
+        date: "May - Jul 2021"
+      - title: "Digitalent Scholarship - Red Hat OpenStack Administrator"
+        school:
+          name: "Ministry of Communication and Informatics"
         date: "Jul - Sep 2020"
+      - title: "Digitalent Scholarship - Associate Cloud Engineer"
+        school:
+          name: "Ministry of Communication and Informatics"
+        date: "Aug - Nov 2019"
+      - title: "SKKNI Training Junior Network Administrator"
+        school:
+          name: "Ministry of Communication and Informatics"
+        date: "Oct 2019"
 
   # Achievements
   achievements:
