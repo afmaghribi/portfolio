@@ -280,6 +280,12 @@ params:
           * Graduated in 7 semesters with cum laude honor.
           * Head of Internetworking subdivision unit in IPTEK student activity unit.
           * Laboratory assistant for Advanced Programming, Computer Networking, and Network Security subjects.
+
+  # Trainings
+  trainings:
+    enable: true
+    title: "Professional Training"
+    items:
       - title: "Google Get Certified Program - Professional Cloud Engineer"
         school:
           name: "Google Cloud Training"
