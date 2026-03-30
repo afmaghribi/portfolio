@@ -135,10 +135,234 @@
       <description>Hugo ships with several Embedded Shortcodes for rich content, along with a Privacy Config and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&#xA;X Simple Shortcode {{&amp;lt; tweet user=&amp;#34;GoHugoIO&amp;#34; id=&amp;#34;1315233626070503424&amp;#34; &amp;gt;}} Profile is a customizable single-page portfolio theme for Hugo featuring a contact form and blog. Made by @gurusabarishh.https://t.co/KwYcwfdy16&#xA;&amp;mdash; GoHugo.io (@GoHugoIO) October 11, 2020 Vimeo Simple Shortcode {{&amp;lt; vimeo 146022717 &amp;gt;}} Youtube Simple Shortcode {{&amp;lt; youtube w7Ft2ymGmfc &amp;gt;}} Theme Custom Shortcodes These shortcodes are not Hugo built-ins, but are provided by the theme.</description>
     </item>
     <item>
-      <title>Professional Certifications</title>
-      <link>http://localhost:1313/certifications/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/certifications/</guid>
+      <title>Alibaba Cloud Professional (ACP) Cloud Computing</title>
+      <link>http://localhost:1313/certifications/09-alibaba-cloud-professional-acp-cloud-computing/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/09-alibaba-cloud-professional-acp-cloud-computing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Associate Cloud Engineer Certification</title>
+      <link>http://localhost:1313/certifications/06-associate-cloud-engineer-certification/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/06-associate-cloud-engineer-certification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS Academy Graduate - Cloud Developing</title>
+      <link>http://localhost:1313/certifications/25-aws-academy-graduate-cloud-developing/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/25-aws-academy-graduate-cloud-developing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS Academy Graduate - Cloud Foundations</title>
+      <link>http://localhost:1313/certifications/23-aws-academy-graduate-cloud-foundations/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/23-aws-academy-graduate-cloud-foundations/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS Academy Graduate - Cloud Operations</title>
+      <link>http://localhost:1313/certifications/24-aws-academy-graduate-cloud-operations/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/24-aws-academy-graduate-cloud-operations/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS Certified Cloud Practitioner</title>
+      <link>http://localhost:1313/certifications/08-aws-certified-cloud-practitioner/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/08-aws-certified-cloud-practitioner/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Build a Secure Google Cloud Network</title>
+      <link>http://localhost:1313/certifications/13-build-a-secure-google-cloud-network/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/13-build-a-secure-google-cloud-network/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Build Infrastructure with Terraform on Google Cloud</title>
+      <link>http://localhost:1313/certifications/17-build-infrastructure-with-terraform-on-google-cloud/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/17-build-infrastructure-with-terraform-on-google-cloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certificate of Cloud Security Knowledge v.4</title>
+      <link>http://localhost:1313/certifications/04-certificate-of-cloud-security-knowledge-v-4/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/04-certificate-of-cloud-security-knowledge-v-4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certified Kubernetes Administrator (CKA)</title>
+      <link>http://localhost:1313/certifications/02-certified-kubernetes-administrator-cka/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/02-certified-kubernetes-administrator-cka/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certified Kubernetes Application Developer (CKAD)</title>
+      <link>http://localhost:1313/certifications/00-certified-kubernetes-application-developer-ckad/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/00-certified-kubernetes-application-developer-ckad/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certified Kubernetes Security Specialist (CKS)</title>
+      <link>http://localhost:1313/certifications/01-certified-kubernetes-security-specialist-cks/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/01-certified-kubernetes-security-specialist-cks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certified Secure Computer User (CSCU)</title>
+      <link>http://localhost:1313/certifications/12-certified-secure-computer-user-cscu/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/12-certified-secure-computer-user-cscu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud Architecture: Design, Implement, and Manage</title>
+      <link>http://localhost:1313/certifications/21-cloud-architecture-design-implement-and-manage/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/21-cloud-architecture-design-implement-and-manage/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud Native Developer IT Professional Program</title>
+      <link>http://localhost:1313/certifications/03-cloud-native-developer-it-professional-program/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/03-cloud-native-developer-it-professional-program/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CompTIA PenTest&#43; ce Certification</title>
+      <link>http://localhost:1313/certifications/05-comptia-pentest-ce-certification/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/05-comptia-pentest-ce-certification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deploy Kubernetes Applications on Google Cloud</title>
+      <link>http://localhost:1313/certifications/14-deploy-kubernetes-applications-on-google-cloud/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/14-deploy-kubernetes-applications-on-google-cloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Develop Your Google Cloud Network</title>
+      <link>http://localhost:1313/certifications/15-develop-your-google-cloud-network/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/15-develop-your-google-cloud-network/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HCIA Cloud Computing</title>
+      <link>http://localhost:1313/certifications/11-hcia-cloud-computing/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/11-hcia-cloud-computing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HCIA Routing &amp; Switching</title>
+      <link>http://localhost:1313/certifications/10-hcia-routing-switching/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/10-hcia-routing-switching/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Implement Cloud Security Fundamentals on Google Cloud</title>
+      <link>http://localhost:1313/certifications/16-implement-cloud-security-fundamentals-on-google-cloud/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/16-implement-cloud-security-fundamentals-on-google-cloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Implement Load Balancing on Compute Engine</title>
+      <link>http://localhost:1313/certifications/19-implement-load-balancing-on-compute-engine/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/19-implement-load-balancing-on-compute-engine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JLPT N5</title>
+      <link>http://localhost:1313/certifications/32-jlpt-n5/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/32-jlpt-n5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LFD201: Introduction to Open Source Development, Git, and Linux</title>
+      <link>http://localhost:1313/certifications/26-lfd201-introduction-to-open-source-development-git-and-linux/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/26-lfd201-introduction-to-open-source-development-git-and-linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LFD259: Kubernetes for Developers</title>
+      <link>http://localhost:1313/certifications/29-lfd259-kubernetes-for-developers/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/29-lfd259-kubernetes-for-developers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LFS261: DevOps and SRE Fundamentals</title>
+      <link>http://localhost:1313/certifications/27-lfs261-devops-and-sre-fundamentals/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/27-lfs261-devops-and-sre-fundamentals/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LFS269: GitOps - Continuous Delivery on Kubernetes with Flux</title>
+      <link>http://localhost:1313/certifications/28-lfs269-gitops-continuous-delivery-on-kubernetes-with-flux/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/28-lfs269-gitops-continuous-delivery-on-kubernetes-with-flux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MikroTik Certified Network Associate (MTCNA)</title>
+      <link>http://localhost:1313/certifications/31-mikrotik-certified-network-associate-mtcna/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/31-mikrotik-certified-network-associate-mtcna/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MikroTik Certified Routing Engineer (MTCRE)</title>
+      <link>http://localhost:1313/certifications/30-mikrotik-certified-routing-engineer-mtcre/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/30-mikrotik-certified-routing-engineer-mtcre/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking Academy Learn-A-Thon 2020</title>
+      <link>http://localhost:1313/certifications/22-networking-academy-learn-a-thon-2020/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/22-networking-academy-learn-a-thon-2020/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Optimize Costs for Google Kubernetes Engine</title>
+      <link>http://localhost:1313/certifications/18-optimize-costs-for-google-kubernetes-engine/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/18-optimize-costs-for-google-kubernetes-engine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Professional Cloud Architect Certification</title>
+      <link>http://localhost:1313/certifications/07-professional-cloud-architect-certification/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/07-professional-cloud-architect-certification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Set Up a Google Cloud Network</title>
+      <link>http://localhost:1313/certifications/20-set-up-a-google-cloud-network/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/20-set-up-a-google-cloud-network/</guid>
       <description></description>
     </item>
   </channel>

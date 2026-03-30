@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS Academy Graduate - Cloud Developing on Ahmad Fauzzan Maghribi</title>
+    <link>http://localhost:1313/certifications/25-aws-academy-graduate-cloud-developing/</link>
+    <description>Recent content in AWS Academy Graduate - Cloud Developing on Ahmad Fauzzan Maghribi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/certifications/25-aws-academy-graduate-cloud-developing/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
