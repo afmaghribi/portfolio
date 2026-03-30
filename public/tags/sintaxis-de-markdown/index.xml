@@ -1,26 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Sintaxis De Markdown on Ahmad Fauzzan Maghribi</title>
-    <link>http://localhost:1313/tags/sintaxis-de-markdown/</link>
-    <description>Recent content in Sintaxis De Markdown on Ahmad Fauzzan Maghribi</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Fri, 09 Dec 2022 19:53:33 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/sintaxis-de-markdown/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Renderizar Matemáticas con Mathjax</title>
-      <link>http://localhost:1313/es/blogs/math/</link>
-      <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/es/blogs/math/</guid>
-      <description>Mathjax Las ecuaciones matemáticas se pueden renderizar usando la sintaxis de Mathjax con soporte de símbolos AMS.&#xA;Opcionalmente, habilita esto por página agregando mathjax: true a tu frontmatter.&#xA;Luego, usa $$ ... $$ en una línea por sí sola para renderizar una ecuación de bloque:&#xA;$$ | Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow P_{2}} [A(x) = 1] | &amp;lt; \text{negligible} $$&#xA;La versión sin procesar es:&#xA;$$ | Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow P_{2}} [A(x) = 1] | &amp;lt; \text{negligible} $$ Escribe ecuaciones en línea con \\( .</description>
-    </item>
-    <item>
-      <title>Sintaxis de Markdown</title>
-      <link>http://localhost:1313/es/blogs/markdown-syntax/</link>
-      <pubDate>Sat, 03 Apr 2021 23:29:21 +0530</pubDate>
-      <guid>http://localhost:1313/es/blogs/markdown-syntax/</guid>
-      <description>Párrafo Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga.</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sintaxis De Markdown on Ahmad Fauzzan Maghribi</title><link>https://lychnobyte.my.id/tags/sintaxis-de-markdown/</link><description>Recent content in Sintaxis De Markdown on Ahmad Fauzzan Maghribi</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 09 Dec 2022 19:53:33 +0530</lastBuildDate><atom:link href="https://lychnobyte.my.id/tags/sintaxis-de-markdown/index.xml" rel="self" type="application/rss+xml"/><item><title>Renderizar Matemáticas con Mathjax</title><link>https://lychnobyte.my.id/es/blogs/math/</link><pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate><guid>https://lychnobyte.my.id/es/blogs/math/</guid><description>Mathjax Las ecuaciones matemáticas se pueden renderizar usando la sintaxis de Mathjax con soporte de símbolos AMS.
+Opcionalmente, habilita esto por página agregando mathjax: true a tu frontmatter.
+Luego, usa $$ ... $$ en una línea por sí sola para renderizar una ecuación de bloque:
+$$ | Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow P_{2}} [A(x) = 1] | &amp;lt; \text{negligible} $$
+La versión sin procesar es:
+$$ | Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow P_{2}} [A(x) = 1] | &amp;lt; \text{negligible} $$ Escribe ecuaciones en línea con \\( .</description></item><item><title>Sintaxis de Markdown</title><link>https://lychnobyte.my.id/es/blogs/markdown-syntax/</link><pubDate>Sat, 03 Apr 2021 23:29:21 +0530</pubDate><guid>https://lychnobyte.my.id/es/blogs/markdown-syntax/</guid><description>Párrafo Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga.</description></item></channel></rss>

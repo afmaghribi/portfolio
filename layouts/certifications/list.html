@@ -18,7 +18,7 @@ Certification | Ahmad Fauzzan Maghribi
     <div class="row justify-content-center">
         {{ range $paginator.Pages }}
         <div class="col-6 col-md-4 col-lg-4 my-4">
-            <div class="cert-card text-center h-100 p-3 shadow-sm rounded-3">
+            <div class="cert-card card text-center h-100 p-3 shadow-sm rounded-3">
                 {{ if .Params.url_credly }}
                 <a href="{{ .Params.url_credly }}" target="_blank" class="text-decoration-none">
                 {{ end }}
@@ -26,7 +26,7 @@ Certification | Ahmad Fauzzan Maghribi
                         <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="img-fluid cert-badge-img">
                     </div>
                     <h5 class="cert-title fw-semibold small">{{ .Title }}</h5>
-                    <p class="cert-meta text-muted extra-small mb-3">{{ .Params.certificate_org }}</p>
+                    <p class="cert-meta extra-small mb-3">{{ .Params.certificate_org }}</p>
                     
                     {{ if .Params.url_credly }}
                     <div class="mt-auto">
@@ -80,6 +80,7 @@ Certification | Ahmad Fauzzan Maghribi
         transition: all 0.3s ease;
         border: 2px solid var(--text-secondary-color) !important;
         background-color: var(--secondary-color) !important;
+        border-radius: 1.5rem !important;
     }
     .cert-card:hover {
         transform: translateY(-5px);
@@ -101,9 +102,17 @@ Certification | Ahmad Fauzzan Maghribi
         align-items: center;
         justify-content: center;
         color: var(--text-color) !important;
+        background-color: transparent !important;
     }
     .cert-meta {
         color: var(--text-secondary-color) !important;
+        background-color: transparent !important;
+    }
+    .cert-badge-wrapper {
+        background-color: transparent !important;
+    }
+    .cert-badge-img {
+        background-color: transparent !important;
     }
     .pagination .page-link {
         color: var(--primary-color);
