@@ -271,38 +271,32 @@ params:
     enable: true
     title: "Professional Training"
     items:
-      - title: "Google Get Certified Program - Professional Cloud Engineer"
-        school:
-          name: "Google Cloud Training"
-        date: "Nov - Dec 2025"
-      - title: "Cloud Native Developer IT Professional Program"
-        school:
-          name: "IT Professional Training"
-        date: "May - Oct 2024"
-      - title: "Google Get Certified Program - Associate Cloud Engineer"
-        school:
-          name: "Google Cloud Training"
-        date: "April - June 2024"
-      - title: "Digitalent Scholarship - AWS Cloud Operations"
-        school:
-          name: "Ministry of Communication and Informatics"
-        date: "Sep - Oct 2022"
-      - title: "Digitalent Scholarship - AWS Cloud Developing"
-        school:
-          name: "Ministry of Communication and Informatics"
-        date: "May - Jul 2021"
-      - title: "Digitalent Scholarship - Red Hat OpenStack Administrator"
-        school:
-          name: "Ministry of Communication and Informatics"
-        date: "Jul - Sep 2020"
-      - title: "Digitalent Scholarship - Associate Cloud Engineer"
-        school:
-          name: "Ministry of Communication and Informatics"
-        date: "Aug - Nov 2019"
-      - title: "SKKNI Training Junior Network Administrator"
-        school:
-          name: "Ministry of Communication and Informatics"
-        date: "Oct 2019"
+      - provider: "Google Cloud"
+        programs:
+          - name: "Google Get Certified Program - Professional Cloud Engineer"
+            date: "Nov - Dec 2025"
+            content: "Focused on designing, developing, and managing robust, secure, scalable, and highly available solutions on GCP."
+          - name: "Google Get Certified Program - Associate Cloud Engineer"
+            date: "April - June 2024"
+            content: "Covered deploying applications, monitoring operations, and managing enterprise solutions on Google Cloud Platform."
+
+      - provider: "Digitalent Scholarship"
+        programs:
+          - name: "AWS Cloud Operations / Developing"
+            date: "2021 - 2022"
+            content: "Hands-on training in managing AWS infrastructure, security, and cloud-native application development."
+          - name: "Red Hat OpenStack Administrator Training"
+            date: "Jul - Sep 2020"
+            content: "Intensive program on managing private cloud infrastructure using Red Hat OpenStack Platform."
+          - name: "Associate Cloud Engineer / Junior Network Admin"
+            date: "2019"
+            content: "Foundational training in cloud infrastructure and enterprise network administration."
+
+      - provider: "Cloud Native"
+        programs:
+          - name: "Cloud Native Developer IT Professional Program"
+            date: "May - Oct 2024"
+            content: "Comprehensive program covering Kubernetes, Docker, and DevOps methodologies for cloud-native development."
 
   # Certifications
   certifications:

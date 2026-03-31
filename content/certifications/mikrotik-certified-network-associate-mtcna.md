@@ -1,8 +1,8 @@
 ---
 title: "MikroTik Certified Network Associate (MTCNA)"
-weight: 16
-image: "https://images.credly.com/images/cdcfce9a-f96a-4622-a2d0-f75aaaf67a0b/blob"
-url_credly: "https://www.credly.com/users/ahmad-fauzzan-maghribi"
+weight: 92
+image: "https://shop.dbg.co.za/image/cache/catalog/products/MikroTik/Training/MTCNA/MTCNA-new-600x600.jpg"
+url_credly: "https://mikrotik.com/training/certificates/b165236c9be6f740401e"
 certificate_org: "MikroTik"
 tags: []
 draft: false

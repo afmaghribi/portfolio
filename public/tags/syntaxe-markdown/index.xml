@@ -1,26 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Syntaxe Markdown on Ahmad Fauzzan Maghribi</title>
-    <link>https://lychnobyte.my.id/tags/syntaxe-markdown/</link>
-    <description>Recent content in Syntaxe Markdown on Ahmad Fauzzan Maghribi</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Fri, 09 Dec 2022 19:53:33 +0530</lastBuildDate>
-    <atom:link href="https://lychnobyte.my.id/tags/syntaxe-markdown/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Rendre les Mathématiques avec Mathjax</title>
-      <link>https://lychnobyte.my.id/fr/blogs/math/</link>
-      <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
-      <guid>https://lychnobyte.my.id/fr/blogs/math/</guid>
-      <description>Mathjax Les équations mathématiques peuvent être rendues en utilisant la syntaxe Mathjax avec le support des symboles AMS.&#xA;Activez ceci de manière optionnelle page par page en ajoutant mathjax: true à votre frontmatter.&#xA;Ensuite, utilisez $$ ... $$ sur une ligne par elle-même pour rendre une équation de bloc:&#xA;$$ | Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow P_{2}} [A(x) = 1] | &amp;lt; \text{negligible} $$&#xA;La version brute est:</description>
-    </item>
-    <item>
-      <title>Syntaxe Markdown</title>
-      <link>https://lychnobyte.my.id/fr/blogs/markdown-syntax/</link>
-      <pubDate>Sat, 03 Apr 2021 23:29:21 +0530</pubDate>
-      <guid>https://lychnobyte.my.id/fr/blogs/markdown-syntax/</guid>
-      <description>Paragraphe Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga.</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Syntaxe Markdown on Ahmad Fauzzan Maghribi</title><link>https://lychnobyte.my.id/tags/syntaxe-markdown/</link><description>Recent content in Syntaxe Markdown on Ahmad Fauzzan Maghribi</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 09 Dec 2022 19:53:33 +0530</lastBuildDate><atom:link href="https://lychnobyte.my.id/tags/syntaxe-markdown/index.xml" rel="self" type="application/rss+xml"/><item><title>Rendre les Mathématiques avec Mathjax</title><link>https://lychnobyte.my.id/fr/blogs/math/</link><pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate><guid>https://lychnobyte.my.id/fr/blogs/math/</guid><description>Mathjax Les équations mathématiques peuvent être rendues en utilisant la syntaxe Mathjax avec le support des symboles AMS.
+Activez ceci de manière optionnelle page par page en ajoutant mathjax: true à votre frontmatter.
+Ensuite, utilisez $$ ... $$ sur une ligne par elle-même pour rendre une équation de bloc:
+$$ | Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow P_{2}} [A(x) = 1] | &amp;lt; \text{negligible} $$
+La version brute est:</description></item><item><title>Syntaxe Markdown</title><link>https://lychnobyte.my.id/fr/blogs/markdown-syntax/</link><pubDate>Sat, 03 Apr 2021 23:29:21 +0530</pubDate><guid>https://lychnobyte.my.id/fr/blogs/markdown-syntax/</guid><description>Paragraphe Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga.</description></item></channel></rss>

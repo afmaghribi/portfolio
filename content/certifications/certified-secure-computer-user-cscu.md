@@ -1,8 +1,8 @@
 ---
 title: "Certified Secure Computer User (CSCU)"
-weight: 9
-image: "https://images.credly.com/images/70e28f0a-6e55-460d-83b5-312959663d27/image.png"
-url_credly: "https://www.credly.com/badges/03d8f342-99d6-444f-8cfc-9333917ba413/public_url"
+weight: 61
+image: "https://aspen.eccouncil.org/Content/Badges/CertifiedBadges/CSCU_BB8BB6E9DDE8.png"
+url_credly: "https://aspen.eccouncil.org/VerifyBadge?type=certification&a=5IjSd2wWrvlLN3JPmqURbTrwXa2ID9iROWGahnveAYc="
 certificate_org: "EC-Council"
 tags: []
 draft: false

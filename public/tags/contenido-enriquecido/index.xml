@@ -1,19 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Contenido Enriquecido on Ahmad Fauzzan Maghribi</title>
-    <link>https://lychnobyte.my.id/tags/contenido-enriquecido/</link>
-    <description>Recent content in Contenido Enriquecido on Ahmad Fauzzan Maghribi</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 03 Apr 2021 19:53:33 +0530</lastBuildDate>
-    <atom:link href="https://lychnobyte.my.id/tags/contenido-enriquecido/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Contenido Enriquecido</title>
-      <link>https://lychnobyte.my.id/es/blogs/rich-content/</link>
-      <pubDate>Sat, 03 Apr 2021 19:53:33 +0530</pubDate>
-      <guid>https://lychnobyte.my.id/es/blogs/rich-content/</guid>
-      <description>Hugo viene con varios Shortcodes Integrados para contenido enriquecido, junto con una Configuración de Privacidad y un conjunto de Shortcodes Simples que habilitan versiones estáticas y sin JS de varias incrustaciones de redes sociales.&#xA;Shortcode Simple de X {{&amp;lt; tweet user=&amp;#34;GoHugoIO&amp;#34; id=&amp;#34;1315233626070503424&amp;#34; &amp;gt;}} Shortcode Simple de Vimeo {{&amp;lt; vimeo 146022717 &amp;gt;}} Shortcode gist {{&amp;lt; gist spf13 7896402 &amp;gt;}} </description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Contenido Enriquecido on Ahmad Fauzzan Maghribi</title><link>https://lychnobyte.my.id/tags/contenido-enriquecido/</link><description>Recent content in Contenido Enriquecido on Ahmad Fauzzan Maghribi</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 03 Apr 2021 19:53:33 +0530</lastBuildDate><atom:link href="https://lychnobyte.my.id/tags/contenido-enriquecido/index.xml" rel="self" type="application/rss+xml"/><item><title>Contenido Enriquecido</title><link>https://lychnobyte.my.id/es/blogs/rich-content/</link><pubDate>Sat, 03 Apr 2021 19:53:33 +0530</pubDate><guid>https://lychnobyte.my.id/es/blogs/rich-content/</guid><description>Hugo viene con varios Shortcodes Integrados para contenido enriquecido, junto con una Configuración de Privacidad y un conjunto de Shortcodes Simples que habilitan versiones estáticas y sin JS de varias incrustaciones de redes sociales.
+Shortcode Simple de X {{&amp;lt; tweet user=&amp;#34;GoHugoIO&amp;#34; id=&amp;#34;1315233626070503424&amp;#34; &amp;gt;}} Shortcode Simple de Vimeo {{&amp;lt; vimeo 146022717 &amp;gt;}} Shortcode gist {{&amp;lt; gist spf13 7896402 &amp;gt;}}</description></item></channel></rss>

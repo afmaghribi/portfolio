@@ -1,8 +1,8 @@
 ---
 title: "MikroTik Certified Routing Engineer (MTCRE)"
-weight: 15
-image: "https://images.credly.com/images/032a65da-a036-4d05-ad80-8fc1274363ab/blob"
-url_credly: "https://www.credly.com/users/ahmad-fauzzan-maghribi"
+weight: 91
+image: "https://shop.dbg.co.za/image/cache/catalog/products/MikroTik/Training/TRN-MTCRE-600x600.jpg"
+url_credly: "https://mikrotik.com/training/certificates/b165534cec7c724fe599"
 certificate_org: "MikroTik"
 tags: []
 draft: false
