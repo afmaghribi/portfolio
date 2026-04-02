@@ -14,20 +14,20 @@ languages:
     contentDir: "content"
     menu:
       main:
+        - identifier: about
+          name: About Me
+          title: Home
+          url: /
+          weight: 1
         - identifier: certifications
           name: Certifications
           title: Professional Certifications
           url: /certifications
-          weight: 1
+          weight: 2
         - identifier: blog
           name: Blog
           title: Blog posts
           url: /blogs
-          weight: 2
-        - identifier: gallery
-          name: Gallery
-          title: Image gallery
-          url: /gallery
           weight: 3
 
 outputs:
@@ -55,31 +55,6 @@ markup:
   goldmark:
     renderer:
       unsafe: true
-
-Menus:
-  main:
-    - identifier: gallery
-      name: Gallery
-      title: Gallery
-      url: /gallery
-      weight: 2
-    #Dropdown menu
-    # - identifier: dropdown
-    #   title: Example dropdown menu
-    #   name: Dropdown
-    #   weight: 3
-    # - identifier: dropdown1
-    #   title: example dropdown 1
-    #   name: example 1
-    #   url: /#
-    #   parent: dropdown
-    #   weight: 1
-    # - identifier: dropdown2
-    #   title: example dropdown 2
-    #   name: example 2
-    #   url: /#
-    #   parent: dropdown
-    #   weight: 2
 
 params:
   title: "Ahmad Fauzzan Maghribi"
@@ -159,8 +134,9 @@ params:
     intro: "Hi, my name is"
     title: "Ahmad Fauzzan Maghribi"
     subtitle: "Cloud Engineer & Kubernetes Specialist"
-    content: "Experienced Cloud Engineer with 3+ years of expertise in managing and optimizing private and public cloud environments using OpenStack, AWS, and GCP. Skilled in infrastructure automation and security."
-    image: /images/gw_op.jpg
+    content: |-
+      I am a Cloud Engineer with experience in OpenStack, AWS, and GCP, focusing on Kubernetes security and infrastructure automation. I enjoy learning and working with modern technologies to build systems that are secure, scalable, and resilient.
+    image: /images/me.png
     bottomImage:
       enable: true
     # roundImage: true # Make hero image circular | default false
@@ -177,16 +153,13 @@ params:
         - icon: fab fa-linkedin
           url: https://linkedin.com/in/afmaghribi
         - icon: fas fa-award
-          url: https://www.credly.com/users/afmaghribi
-      # customIcons:
-      #   - icon: fab fa-linkedin
-      #     url: https://linkedin.com/in/afmaghribi
+          url: https://www.credly.com/users/ahmad-fauzzan-maghribi
 
   # About
   about:
-    enable: true
+    enable: false
     title: "About Me"
-    image: "/images/gw.jpg"
+    image: "/images/me.png"
     content: |-
       I am a Cloud Engineer with 3+ years of expertise in managing and optimizing private and public cloud environments using OpenStack, AWS, and Google Cloud Platform (GCP).
 
@@ -251,7 +224,7 @@ params:
 
   # Education
   education:
-    enable: true
+    enable: false
     # title: "Custom Name"
     index: false
     items:
@@ -269,8 +242,17 @@ params:
   # Trainings
   trainings:
     enable: true
-    title: "Professional Training"
+    title: "Education & Professional Development"
     items:
+      - provider: "Formal Education"
+        programs:
+          - name: "Bachelor of Telecommunication Engineering"
+            date: "Nov 2017 - Mar 2021"
+            content: |-
+              * **Telkom Purwokerto Institute of Technology** (GPA: 3.74/4.00, Cum Laude)
+              * Laboratory assistant for Advanced Programming, Computer Networking, and Network Security.
+              * Head of Internetworking subdivision in IPTEK student activity unit.
+
       - provider: "Google Cloud"
         programs:
           - name: "Google Get Certified Program - Professional Cloud Engineer"
@@ -292,7 +274,7 @@ params:
             date: "2019"
             content: "Foundational training in cloud infrastructure and enterprise network administration."
 
-      - provider: "Cloud Native"
+      - provider: "IT Professional"
         programs:
           - name: "Cloud Native Developer IT Professional Program"
             date: "May - Oct 2024"
@@ -342,10 +324,10 @@ params:
       enable: false
       disableFeaturedImage: false
     socialNetworks:
-      github: https://github.com
-      linkedin: https://linkedin.com
+      github: https://github.com/afmaghribi
+      linkedin: https://linkedin.com/in/afmaghribi
       twitter: https://twitter.com
-      instagram: https://instagram.com
+      instagram: https://instagram.com/fauzanmaghribi
       facebook: https://facebook.com
 
   # List pages like blogs and posts
