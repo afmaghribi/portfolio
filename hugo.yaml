@@ -121,12 +121,12 @@ params:
       showOnScrollUp : true
     enableSeparator: false
     menus:
-      disableAbout: false
-      disableExperience: false
-      disableEducation: false
-      disableProjects: false
-      disableAchievements: false
-      disableContact: false
+      disableAbout: true
+      disableExperience: true
+      disableEducation: true
+      disableProjects: true
+      disableAchievements: true
+      disableContact: true
 
   # Hero
   hero:
@@ -180,7 +180,7 @@ params:
     enable: true
     # title: "Custom Name"
     items:
-      - company: "Experience"
+      - company: "Professional"
         jobs:
           - name: "L2 Cloud Operation Engineer at Btech"
             date: "Aug 2023 - present"
@@ -203,7 +203,7 @@ params:
             content: |-
               * Installed and maintained IT network appliances in branch offices.
 
-      - company: "Internship"
+      - company: "Internships"
         jobs:
           - name: "Core Network Operation at PT Telkom Indonesia"
             date: "Aug 2020 - Sep 2020"
