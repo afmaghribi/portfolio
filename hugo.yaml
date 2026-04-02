@@ -133,10 +133,10 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Ahmad Fauzzan Maghribi"
-    subtitle: "Cloud Engineer & Kubernetes Specialist"
+    subtitle: "Cloud Engineer"
     content: |-
       I am a Cloud Engineer with experience in OpenStack, AWS, and GCP, focusing on Kubernetes security and infrastructure automation. I enjoy learning and working with modern technologies to build systems that are secure, scalable, and resilient.
-    image: /images/me.png
+    image: /images/me.jpg
     bottomImage:
       enable: true
     # roundImage: true # Make hero image circular | default false
@@ -159,7 +159,7 @@ params:
   about:
     enable: false
     title: "About Me"
-    image: "/images/me.png"
+    image: "/images/me.jpg"
     content: |-
       I am a Cloud Engineer with 3+ years of expertise in managing and optimizing private and public cloud environments using OpenStack, AWS, and Google Cloud Platform (GCP).
 
