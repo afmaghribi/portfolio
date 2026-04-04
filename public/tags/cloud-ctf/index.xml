@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloud-Ctf on Ahmad Fauzzan Maghribi</title>
+    <link>https://lychnobyte.my.id/tags/cloud-ctf/</link>
+    <description>Recent content in Cloud-Ctf on Ahmad Fauzzan Maghribi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 23 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lychnobyte.my.id/tags/cloud-ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTB Business CTF 2022 - Trade</title>
+      <link>https://lychnobyte.my.id/blogs/htb-business-ctf-2022-trade/</link>
+      <pubDate>Mon, 23 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/blogs/htb-business-ctf-2022-trade/</guid>
+      <description>Cover Illustration source https://www.pixiv.net/en/artworks/112523817&#xA;Hello all, so i just decide to start blogging again but i don’t know what to write in this blog. So i just rewrite my old blog post into english with some adjustment and revision. :D&#xA;Back in 2022 i participated alone in HTB Bussiness CTF just for fun because i curious with their Cloud category and it’s only 2 challenge in that category, lol.</description>
+    </item>
+  </channel>
+</rss>

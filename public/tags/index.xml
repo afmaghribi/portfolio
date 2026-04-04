@@ -2,143 +2,192 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Ahmad Fauzzan Maghribi</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://lychnobyte.my.id/tags/</link>
     <description>Recent content in Tags on Ahmad Fauzzan Maghribi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 09 Dec 2022 19:53:33 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lychnobyte.my.id/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Ejemplo</title>
-      <link>http://localhost:1313/tags/ejemplo/</link>
-      <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/tags/ejemplo/</guid>
+      <title>Aws</title>
+      <link>https://lychnobyte.my.id/tags/aws/</link>
+      <pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/tags/aws/</guid>
       <description></description>
     </item>
     <item>
-      <title>Example</title>
-      <link>http://localhost:1313/tags/example/</link>
+      <title>Cloud</title>
+      <link>https://lychnobyte.my.id/tags/cloud/</link>
+      <pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/tags/cloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Eks</title>
+      <link>https://lychnobyte.my.id/tags/eks/</link>
+      <pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/tags/eks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>https://lychnobyte.my.id/tags/kubernetes/</link>
+      <pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cognito</title>
+      <link>https://lychnobyte.my.id/tags/cognito/</link>
+      <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/tags/cognito/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Iam</title>
+      <link>https://lychnobyte.my.id/tags/iam/</link>
+      <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/tags/iam/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>S3</title>
+      <link>https://lychnobyte.my.id/tags/s3/</link>
+      <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/tags/s3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sns</title>
+      <link>https://lychnobyte.my.id/tags/sns/</link>
+      <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/tags/sns/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sqs</title>
+      <link>https://lychnobyte.my.id/tags/sqs/</link>
+      <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/tags/sqs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ctf</title>
+      <link>https://lychnobyte.my.id/tags/ctf/</link>
+      <pubDate>Fri, 11 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/tags/ctf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ec2</title>
+      <link>https://lychnobyte.my.id/tags/ec2/</link>
+      <pubDate>Fri, 11 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/tags/ec2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssrf</title>
+      <link>https://lychnobyte.my.id/tags/ssrf/</link>
+      <pubDate>Fri, 11 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/tags/ssrf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud-Ctf</title>
+      <link>https://lychnobyte.my.id/tags/cloud-ctf/</link>
+      <pubDate>Mon, 23 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/tags/cloud-ctf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ejemplo</title>
+      <link>https://lychnobyte.my.id/tags/ejemplo/</link>
       <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/tags/example/</guid>
+      <guid>https://lychnobyte.my.id/tags/ejemplo/</guid>
       <description></description>
     </item>
     <item>
       <title>Exemple</title>
-      <link>http://localhost:1313/tags/exemple/</link>
+      <link>https://lychnobyte.my.id/tags/exemple/</link>
       <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/tags/exemple/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Markdown Syntax</title>
-      <link>http://localhost:1313/tags/markdown-syntax/</link>
-      <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/tags/markdown-syntax/</guid>
+      <guid>https://lychnobyte.my.id/tags/exemple/</guid>
       <description></description>
     </item>
     <item>
       <title>Mathjax</title>
-      <link>http://localhost:1313/tags/mathjax/</link>
+      <link>https://lychnobyte.my.id/tags/mathjax/</link>
       <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/tags/mathjax/</guid>
+      <guid>https://lychnobyte.my.id/tags/mathjax/</guid>
       <description></description>
     </item>
     <item>
       <title>Sintaxis De Markdown</title>
-      <link>http://localhost:1313/tags/sintaxis-de-markdown/</link>
+      <link>https://lychnobyte.my.id/tags/sintaxis-de-markdown/</link>
       <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/tags/sintaxis-de-markdown/</guid>
+      <guid>https://lychnobyte.my.id/tags/sintaxis-de-markdown/</guid>
       <description></description>
     </item>
     <item>
       <title>Syntaxe Markdown</title>
-      <link>http://localhost:1313/tags/syntaxe-markdown/</link>
+      <link>https://lychnobyte.my.id/tags/syntaxe-markdown/</link>
       <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/tags/syntaxe-markdown/</guid>
+      <guid>https://lychnobyte.my.id/tags/syntaxe-markdown/</guid>
       <description></description>
     </item>
     <item>
       <title>Échantillon</title>
-      <link>http://localhost:1313/tags/%C3%A9chantillon/</link>
+      <link>https://lychnobyte.my.id/tags/%C3%A9chantillon/</link>
       <pubDate>Sat, 03 Apr 2021 23:29:21 +0530</pubDate>
-      <guid>http://localhost:1313/tags/%C3%A9chantillon/</guid>
+      <guid>https://lychnobyte.my.id/tags/%C3%A9chantillon/</guid>
       <description></description>
     </item>
     <item>
       <title>Muestra</title>
-      <link>http://localhost:1313/tags/muestra/</link>
+      <link>https://lychnobyte.my.id/tags/muestra/</link>
       <pubDate>Sat, 03 Apr 2021 23:29:21 +0530</pubDate>
-      <guid>http://localhost:1313/tags/muestra/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Sample</title>
-      <link>http://localhost:1313/tags/sample/</link>
-      <pubDate>Sat, 03 Apr 2021 23:29:21 +0530</pubDate>
-      <guid>http://localhost:1313/tags/sample/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Emoji Support</title>
-      <link>http://localhost:1313/tags/emoji-support/</link>
-      <pubDate>Sat, 03 Apr 2021 22:53:58 +0530</pubDate>
-      <guid>http://localhost:1313/tags/emoji-support/</guid>
+      <guid>https://lychnobyte.my.id/tags/muestra/</guid>
       <description></description>
     </item>
     <item>
       <title>Soporte De Emoji</title>
-      <link>http://localhost:1313/tags/soporte-de-emoji/</link>
+      <link>https://lychnobyte.my.id/tags/soporte-de-emoji/</link>
       <pubDate>Sat, 03 Apr 2021 22:53:58 +0530</pubDate>
-      <guid>http://localhost:1313/tags/soporte-de-emoji/</guid>
+      <guid>https://lychnobyte.my.id/tags/soporte-de-emoji/</guid>
       <description></description>
     </item>
     <item>
       <title>Support Des Emoji</title>
-      <link>http://localhost:1313/tags/support-des-emoji/</link>
+      <link>https://lychnobyte.my.id/tags/support-des-emoji/</link>
       <pubDate>Sat, 03 Apr 2021 22:53:58 +0530</pubDate>
-      <guid>http://localhost:1313/tags/support-des-emoji/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Placeholder Text</title>
-      <link>http://localhost:1313/tags/placeholder-text/</link>
-      <pubDate>Sat, 03 Apr 2021 22:41:10 +0530</pubDate>
-      <guid>http://localhost:1313/tags/placeholder-text/</guid>
+      <guid>https://lychnobyte.my.id/tags/support-des-emoji/</guid>
       <description></description>
     </item>
     <item>
       <title>Texte De Remplissage</title>
-      <link>http://localhost:1313/tags/texte-de-remplissage/</link>
+      <link>https://lychnobyte.my.id/tags/texte-de-remplissage/</link>
       <pubDate>Sat, 03 Apr 2021 22:41:10 +0530</pubDate>
-      <guid>http://localhost:1313/tags/texte-de-remplissage/</guid>
+      <guid>https://lychnobyte.my.id/tags/texte-de-remplissage/</guid>
       <description></description>
     </item>
     <item>
       <title>Texto De Relleno</title>
-      <link>http://localhost:1313/tags/texto-de-relleno/</link>
+      <link>https://lychnobyte.my.id/tags/texto-de-relleno/</link>
       <pubDate>Sat, 03 Apr 2021 22:41:10 +0530</pubDate>
-      <guid>http://localhost:1313/tags/texto-de-relleno/</guid>
+      <guid>https://lychnobyte.my.id/tags/texto-de-relleno/</guid>
       <description></description>
     </item>
     <item>
       <title>Contenido Enriquecido</title>
-      <link>http://localhost:1313/tags/contenido-enriquecido/</link>
+      <link>https://lychnobyte.my.id/tags/contenido-enriquecido/</link>
       <pubDate>Sat, 03 Apr 2021 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/tags/contenido-enriquecido/</guid>
+      <guid>https://lychnobyte.my.id/tags/contenido-enriquecido/</guid>
       <description></description>
     </item>
     <item>
       <title>Contenu Enrichi</title>
-      <link>http://localhost:1313/tags/contenu-enrichi/</link>
+      <link>https://lychnobyte.my.id/tags/contenu-enrichi/</link>
       <pubDate>Sat, 03 Apr 2021 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/tags/contenu-enrichi/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Rich Content</title>
-      <link>http://localhost:1313/tags/rich-content/</link>
-      <pubDate>Sat, 03 Apr 2021 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/tags/rich-content/</guid>
+      <guid>https://lychnobyte.my.id/tags/contenu-enrichi/</guid>
       <description></description>
     </item>
   </channel>

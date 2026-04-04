@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href="/images/logo.png" type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:title" content="HTB Business CTF 2022 - Operator" />
+<meta property="og:description" content="Solving the &#39;Operator&#39; challenge from HTB Business CTF 2022, involving Gogs, AWX-operator, and Kubernetes." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lychnobyte.my.id/blogs/htb-business-ctf-2022-operator/" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2025-06-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-06-24T00:00:00+00:00" /><meta property="og:site_name" content="Ahmad Fauzzan Maghribi" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="HTB Business CTF 2022 - Operator"/>
+<meta name="twitter:description" content="Solving the &#39;Operator&#39; challenge from HTB Business CTF 2022, involving Gogs, AWX-operator, and Kubernetes."/>
+
+
+
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/language-switcher.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="Solving the &#39;Operator&#39; challenge from HTB Business CTF 2022, involving Gogs, AWX-operator, and Kubernetes.">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  
+
+  <title>
+HTB Business CTF 2022 - Operator | Ahmad Fauzzan Maghribi
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.documentElement.classList.add('dark');
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  true ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/images/logo.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                afmaghribi
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Search...'
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/" title="Home">
+                            
+                            About Me
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/certifications" title="Professional Certifications">
+                            
+                            Certifications
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blogs" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle" type="button" aria-label="Toggle dark mode">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">HTB Business CTF 2022 - Operator</h1>
+            <div class="text-center">
+              
+                Lychnobyte
+                <small>|</small>
+              
+              Jun 24, 2025
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid mx-auto d-block" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1751848401365/d096eefa-5ccf-4ef1-95a6-0b6677255a4b.jpeg" alt="HTB Business CTF 2022 - Operator">
+          </div>
+          
+          <article class="page-content  p-2">
+          <blockquote>
+<p><strong><em>Cover Illustration source</em></strong> <a href="https://www.pixiv.net/en/artworks/89193760">https://www.pixiv.net/en/artworks/89193760</a></p>
+</blockquote>
+<p>Alright, let’s continues to 2nd challenge called <code>Operator</code>. Here is the challenge description:</p>
+<blockquote>
+<p>We have located Monkey Business operator blog where they are leaking personal informations. We would like you to break into their system and figure out a way to gain full control.</p>
+</blockquote>
+<p>Just like previous challenge we only got an <code>IP address</code>. So i just running <code>Nmap</code> to scan the <code>IP address</code> to know what services are running and in which port.</p>
+<p><img alt="Nmap output" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFvoDudyenMEZeX2XQ_vqF44m-WjZgO-WNehLB2OcgEsjQHbpyZBHKnEl2p1qFc-kC9bHePc7wOdOH06m3_9H-KVynuQBKBvGEAGeThBeM8MDsQa3qL0gEYHWLRr93xnFEcdGq7AkQQngI_7NKe7quvdam-s3VZPdS5bSC3Bu_mFUOAvBdgvM1qnmrmw/w640-h200/Untitled.png"></p>
+<p>The scan result show there is 6 open ports:</p>
+<ol>
+<li>
+<p>22 - ssh</p>
+</li>
+<li>
+<p>80 - http</p>
+</li>
+<li>
+<p>3000 - ppp</p>
+</li>
+<li>
+<p>8443 - https (most likely kube api server)</p>
+</li>
+<li>
+<p>10250 - http (most likely kubelet)</p>
+</li>
+<li>
+<p>30080 - http nginx</p>
+</li>
+</ol>
+<p>Let’s explore each services one-by-one</p>
+<h3 id="1-80---web-server">1. 80 - Web server</h3>
+<p>Access from browser we got website page like this.</p>
+<p><img alt="Blog page" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFj06MHvi36jxgWkPKzZaBZE3bqQi_UHZvm9lIHH2e7LGkqYC-Xf_P4ntuNquoneDgGNsixbIyqv1X1Yp8uxM72dW82KSNfQyzKY1mnZC4rihU5Fjw4OZvyH4vqQBzZmdIHtqsTG6k-7b9uIGwq-Vp2ywV5OfPuTUfwVzQlYx2A3XY5PnYa4pF_3V09w/w640-h344/Untitled%20(1).png"></p>
+<p>After check all posts on the website, there is one post that provide a link that leads to port 3000. Let’s visit that link.</p>
+<p><img alt="Blog link" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgppb0CXApaDzhJHoIhf9Kv0mxyy6DRipcF82iODS90o06GEtNwfsBLFhiGTkqHZui6oZbpQvP-1-nWrJORzr_9GTIa3PwWMH8MrdILdK5ET-KRZ4QqLLUCb7jKe_h5BtZ0OCimznIE3U7GD2Bv5SKRkYFMjcYx1pL9bvYjD1z-sFll66mZT7OphV6FbA/w640-h340/Untitled%20(3).png"></p>
+<h3 id="2-3000---gogs-self-hosted-git-server">2. 3000 - gogs (self-hosted git server)</h3>
+<p>The link that we found earlier leads us to git repository.</p>
+<p><img alt="Gogs repo" src="https://blogger.googleusercontent.com/img/a/AVvXsEgNd0lOIiqbubaxkeKpK2XaUOtHamlKIXYQPfQpw75gQoBDIWGYt2Y_m9HoHtWutG5ArQek4vIgOYPCDnJsl6cJNyCZV0jj2DEzbI5QHAD1T1wyllzOBDLzTjpVn-k9HdpFQQoEqhqP6HPGpNI4iMhRzoQGn8-RHyUXldnKkBZoWOA7uAtze4LzEUS2PQ/w640-h338/Untitled%20(4).png"></p>
+<p>Since the repository itself seems not have useful information i tried to explore the gogs server to find another repository.</p>
+<p>Yeah, there another repository named <code>awx-operator</code></p>
+<p><img alt="AWX Operator" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtYBffTJE4Rsm_Mae88dwNxnPBQPdlRBZhNTrdMn_95IIpOb73d3OULz1DU-Cm938eV9DKqm4HYzRnLet7DgIjRnJuxfEXQGo82_8-dtWPRzbpPWcVWNuuW5x_1jiVlhuxmJwNE4K8meF7EuWjO0jvJpOwALZXrcNPzXH-yexhHQPlTexO3Szm5BQLiA/w640-h138/Untitled%20(5).png"></p>
+<p>Explore the repository and i found a closed issue. That issue mentioned another repository called <code>awx-k8s-config</code>.</p>
+<p><img alt="Gogs issues" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJJjmWZh8ontzI34hIBgAvHVcnw0idZxfUy6PoWYoix6esL6KmR8_eFJEQFbr1yHQssw47pz_LXauEAIlixNPWDB9cWPtkuFtyZakq0XZfza5BoHheQ-fs2LBL1F3TF8Cf7B60D2rgqhMAPM0G__KclWFHxjNzs8DbDTLKrJhe127XayfpECb3zFoPTw/w640-h276/Untitled%20(6).png"></p>
+<p>Then i open the repository and try to explore the files stored in the repository. Seems like the files stored in the repository are manifest file to deploy <code>awx-operator</code> in kubernetes. From commit history i found credentials for login to <code>awx operator dashboard</code></p>
+<p><img alt="Credentials found" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyqGOCnE-nCbXbNNFc9liPbEshvab_WKU9Svl5DyWJfR8KRw2o3cMEkJMo9gStvymkSQHgtNLQ1xCRhOd7w5F62bhHACmCgTDQDUNtMffkschE5ZGBPNUy9AqzTch7LWRn1SEBJoygYEMwXbhx_7vxwoZ3mXqVq45p978irgTvdV0BOGHOspyyOe1NJg/w640-h230/Untitled%20(7).png"></p>
+<h3 id="3-30080---awx-dashboard">3. 30080 - Awx dashboard</h3>
+<p>Login to awx dashboard using credentials we got before, here the dashboard look like.</p>
+<p><img alt="AWX Dashboard" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFRVGT9ItniruWdUt9uehVauotEFIH7XjUeothYFV8ec9YlLQNTeaK2Y8Eq8HJut6PjICfCNJ-3aKQfsd-6OfuEc5sRXxmt5Qx34PT_mDxAPTYdnIfToNEwhJ2SGGtJ6iD7NFh7RH_8ZzReftTBVMoSAUx5jU27Li2B4UqWy3ZA81RFUcbuboM-OAQsg/w640-h340/Untitled%20(8).png"></p>
+<p>Briefly, how awx work is awx will deploy pod in kubernetes cluster then make it as runner to to run ansible playbook. So, we can simple create our own ansible playbook to get kubernetes serviceaccount token that we can use to access kubernetes cluster.</p>
+<p>First, we create new user and repository on gogs server. Then we stored our ansible playbook that print serviceaccount token that stored in file <code>/var/run/secrets/kubernetes.io/serviceaccount/token</code> inside the pod. Here the playbook that i use.</p>
+<p><img alt="Ansible Playbook" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGrBxyEOkA1_NR2cGvUWBUwaxGRiwO2N9vZ4UngPlMVQWdpbhWo39HGjeNQqNclf93ngOskjH2LW3WOHxuFBVUoQXjcpJ6zmyQ73XBOQDdoYdNJvJiKFjDuXsiUZLYXqr_Wq50YM7aAnTSe_fnRh0npDn3D7a_ZuU76GgAwKTzm9F-3RYPjNCM7o9qBg/w640-h206/Untitled%20(17).png"></p>
+<p>Then on awx dashboard we create new project that use our new repository as source control.</p>
+<p><img alt="AWX Project" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHaoV2dBmE3_VZlVheNrQGVsMPNiDUAJcTwkbCZhmFm3ft5LRD0Dpeaf3_Po77DJUZLzPChOKMNdhZ7tlFn72ASSP58K6xIEQxsIGwo-W7YsZMYksdoMnWFMUyqhkeW9jLtIjWxEk-8hXPakHr-7yitDOl3BkuNVjFQunTl-uYCKpisji3h5w-VcOvkw/w640-h300/Untitled%20(9).png"></p>
+<p>Then we create new job template for the project to run ansible playbook.</p>
+<p><img alt="AWX Job Template" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjW4i9lOy05oNcjEe21Jvb7ubOLhLtOgF-jTJxvQRF_RsrLn4uQpyoA8XGS2prpnpoe8MMFymRdkx5XmxtQwnpZZrG7kEwxNHG0cQAhQM42hhKrUIbvvB2W_oSQoLbDyxOHA2VIJQZ6nsDbpNQ68DIBABjWGHAjiIDNwf5HsBbomqGqpLWirg44z0YtHw/w640-h314/Untitled%20(10).png"></p>
+<p>Then we run the job, but i got an error. Seems like the file that contain serviceaccount doesn’t exist in the runner pod.</p>
+<p><img alt="AWX Error" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSuwG1clieA8jbnKxJutlthQc6_1Qtp153hWx8lLkGzzSzuciORe7h33Nu2zbK-RDNDOCCxULaj3Gt1x5j_gbs28dWSFfeWaA6NrGCI8EMThn0dzxYher7xTxKi4Ilv7SVOJnFHZekqAJMyfPR5_OwgkSY03NwkgMDUorsTKt5sdopBvEglRY-esnCdg/w640-h324/Untitled%20(11).png"></p>
+<p>After explore a while i found that the pod spec that deploy as runner has <code>automountServiceAccountToken</code> option set to <code>false</code>. We need to change that option to <code>true</code>. The configuration can found in <code>Instance Group</code> -&gt; <code>choose group</code> -&gt; <code>customize pod configuration</code>.</p>
+<p><img alt="AWX Pod Config" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_Wq5xpj7srsCGnw9bz4qeskk1vKVfM4wdbuzPioQb4188igja-l_1mof_APWofAXLcngBO5Pm_enKoTizdjsbldBi2zoKhjlP_3SHUlZA39xSATRPWjUof5MNx8so5ggVrQJOqUEIlE7GrpAKVKSanDDy6efrhRjmz58KrL7iBEvMWEw0WzfBgNbkbA/w640-h252/Untitled%20(12).png"></p>
+<p>Then re-run the job we’ve created. Now finally we got the serviceaccount token.</p>
+<p><img alt="AWX Success" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizCKaG288QUf5HryxnHZxkCTWAXsnzfOPBZs_vq7dtOCpH5KLNjdhQMtxnG7MwYcE_s9NKNwOGvm_jz_25-32aU4q1EhQz_YcZ7rN--cxDteG1ykgWqcbSQWaDloosBzieIa_gNVxhqNBjN_Nc_72V3vXKbkyW0Kt8IoetWCo1Cxx-a7Bt5ZCQYpVPHA/w640-h332/Untitled%20(13).png"></p>
+<p>Next we use that token to access the kubernetes cluster with kubectl.</p>
+<p><img alt="Kubectl access" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDX9c3FfqPm_Fh-Tt8kAE7Vz3Z1FRsNT-O71fVBAj-5h_b33o5A3vWv1OGPITeUD9ObJ6SC3zJtcchiLGjRWzixLo44YRgcl81LuFHkIzhqL_HXPs4PGBFrTT9uRAkIqa2zVO85u6R8pt_TBH6HRTMcAKdiOlOUj_8QaKZo5IsxgyPtuSGEB9nlf5Jng/w640-h154/Untitled%20(18).png"></p>
+<p>When i tried to list pods running got error permission. Seems like our token doesn’t has such permission, since we use the <code>default</code> serviceaccount. Well we change it but first we need to know what serviceaccount that exist in the cluster. We can open <code>awx-operator.yaml</code> file in <code>awx-k8-config</code> repository to see that we can use <code>awx-operator-controller-manager</code> serviceaccount.</p>
+<p><img alt="Service Account info" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDKNLInik7kAiXD_GgAjSu2VP7Y0CxF2r4GCmW4iO9uhvNHV703cO9cwKqSHUH-1dz5FCieUMML9FQxGSqTg0fK8P8kOkBMHoNRo-joRwExq18SzuNlXXPpScUgnUnKmCbTeaJ8LKwS6Ipa76gStZqLaXX49VDAUZc8hA1-1ohZv5Q8IffUZOlte1W7A/w640-h228/Untitled%20(14).png"></p>
+<p>To make it our runner pod using that serviceaccount we need to set option <code>serviceAccountName</code> in pod configuration.</p>
+<p><img alt="AWX Service Account config" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnMDXSr-bO7nuz33JH_r7VTID6pvFAjqxG6f7vBpeiMGXWPB47sbZoUlOJZm88BpbF8U5hcimaz54XFh6fJKSkpqm6ZXSarmVVTfFYHX505ExMfzd25H_NhbDo5KlH4DTXDj-wwlBerZ7p1-9-QJLdg9v7Ihb7-YL1k1qSGknBKY_yXMkdqOb1-OPbpQ/w640-h258/Untitled%20(15).png"></p>
+<p>Re-run the job to get new token from new serviceaccount</p>
+<p>Then try run kubectl using new token, here i check the permission we got.</p>
+<p><img alt="Auth check" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhu0KfxLd4SXfjTFW7mrehQihAYQKA4segLCUhGGS1iTjI_mMyNzCw7XLZ2z3OWpSoD2kyuKHcfu7UPWN97Nt98VuJAWVD-cyPehv0RAVtseZhRT85GYXns7ajI8i2zvDuCrhkvWnkEmrpxVYufh4fk_h-8TvENchpETObHs7laWKyyWYsWoTnmexp8oA/w640-h280/Untitled%20(16).png"></p>
+<p>Seems like now we can create new pod. Since the <code>flag.txt</code> file are stored in the host machine we can create pod that mount <code>/</code> host machine to the pod, so we can read the <code>flag.txt</code>. Here the pod manifest that i use.</p>
+<p><img alt="Pod Manifest" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhomFHRpyC2-Ibb1lf7MoTzGOFuWStTZyO4UBgryKWPvVdNjPJ9YgQTcOQFHVBBRACoDRUHzi-Kahq3SMSTGPbAyByoTEGMM7GEfZgHOUUX0_XwFJlZ3eOptjaffzHCAPXwcTn8Iba2oTt8jjLjUx4y8JZZJVh3-TLJetlEqb48peaZlOMIWEgQKRgB6A/w640-h372/Untitled%20(20).png"></p>
+<p>Next just create the pod and exec shell inside pod then read the <code>flag.txt</code> file.</p>
+<p><img alt="Flag found" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsKpKknNViBuouFpEXxktS4U-qTOeO4CSoSObAb-rGybHVDQe6dLdwvhyP247JLtIwyg-rlXCQcbAQ1SHZO-3biOCMd6yzTaYc3-6hxbexvB0eml6jwgW1yxw10q99ugErkOfL-tfTSoaMuJ5wcVuAyTfT4BBdKPIyvFIJD2lQ0fwziLotoWxCd0smIQ/w640-h202/Untitled%20(19).png"></p>
+<p>Reference:</p>
+<ul>
+<li>
+<p><a href="https://faun.pub/attacking-kubernetes-clusters-using-the-kubelet-api-abafc36126ca">https://faun.pub/attacking-kubernetes-clusters-using-the-kubelet-api-abafc36126ca</a></p>
+</li>
+<li>
+<p><a href="https://github.com/kubernetes/kubernetes/issues/2797">https://github.com/kubernetes/kubernetes/issues/2797</a></p>
+</li>
+</ul>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-80---web-server">1. 80 - Web server</a></li>
+        <li><a href="#2-3000---gogs-self-hosted-git-server">2. 3000 - gogs (self-hosted git server)</a></li>
+        <li><a href="#3-30080---awx-dashboard">3. 30080 - Awx dashboard</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              
+              <li class="list-inline-item"><a href="/tags/cloud"
+                target="_blank"
+              >cloud</a></li>
+              
+              
+              <li class="list-inline-item"><a href="/tags/ctf"
+                target="_blank"
+              >ctf</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar =  true ;
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    
+
+
+
+  
+
+ 
+
+
+<div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/afmaghribi" target="_blank" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path id="footer-socialNetworks-github-svg-path"
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://linkedin.com/in/afmaghribi" target="_blank" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+    <a href="https://instagram.com/fauzanmaghribi" target="_blank" aria-label="instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+            <radialGradient id="yOrnnhliCrdS2gy~4tD8ma" cx="19.38" cy="42.035" r="44.899"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#fd5" />
+                <stop offset=".328" stop-color="#ff543f" />
+                <stop offset=".348" stop-color="#fc5245" />
+                <stop offset=".504" stop-color="#e64771" />
+                <stop offset=".643" stop-color="#d53e91" />
+                <stop offset=".761" stop-color="#cc39a4" />
+                <stop offset=".841" stop-color="#c837ab" />
+            </radialGradient>
+            <path fill="url(#yOrnnhliCrdS2gy~4tD8ma)"
+                d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z" />
+            <radialGradient id="yOrnnhliCrdS2gy~4tD8mb" cx="11.786" cy="5.54" r="29.813"
+                gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#4168c9" />
+                <stop offset=".999" stop-color="#4168c9" stop-opacity="0" />
+            </radialGradient>
+            <path fill="url(#yOrnnhliCrdS2gy~4tD8mb)"
+                d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z" />
+            <path fill="#fff"
+                d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z" />
+            <circle cx="31.5" cy="16.5" r="1.5" fill="#fff" />
+            <path fill="#fff"
+                d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z" />
+        </svg>
+    </a>
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+                <div class="pb-2">
+                    <a href="https://lychnobyte.my.id/" title="Ahmad Fauzzan Maghribi">
+                        <img alt="Footer logo" src="/images/logo.png"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2026  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+        document.documentElement.classList.remove('dark');
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            document.documentElement.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script>
+      
+      window.searchIndexURL = "/index.json";
+    </script>
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

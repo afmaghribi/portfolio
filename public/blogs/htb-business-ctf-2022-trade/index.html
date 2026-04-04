@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href="/images/logo.png" type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:title" content="HTB Business CTF 2022 - Trade" />
+<meta property="og:description" content="Solving the &#39;Trade&#39; challenge from HTB Business CTF 2022, featuring Subversion, AWS SNS, and DynamoDB injection." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lychnobyte.my.id/blogs/htb-business-ctf-2022-trade/" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2025-06-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-06-23T00:00:00+00:00" /><meta property="og:site_name" content="Ahmad Fauzzan Maghribi" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="HTB Business CTF 2022 - Trade"/>
+<meta name="twitter:description" content="Solving the &#39;Trade&#39; challenge from HTB Business CTF 2022, featuring Subversion, AWS SNS, and DynamoDB injection."/>
+
+
+
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/language-switcher.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="Solving the &#39;Trade&#39; challenge from HTB Business CTF 2022, featuring Subversion, AWS SNS, and DynamoDB injection.">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  
+
+  <title>
+HTB Business CTF 2022 - Trade | Ahmad Fauzzan Maghribi
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.documentElement.classList.add('dark');
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  true ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/images/logo.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                afmaghribi
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Search...'
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/" title="Home">
+                            
+                            About Me
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/certifications" title="Professional Certifications">
+                            
+                            Certifications
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blogs" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle" type="button" aria-label="Toggle dark mode">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">HTB Business CTF 2022 - Trade</h1>
+            <div class="text-center">
+              
+                Lychnobyte
+                <small>|</small>
+              
+              Jun 23, 2025
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid mx-auto d-block" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1751579912885/c7c3d172-a44f-41bb-9162-0057813c3701.jpeg" alt="HTB Business CTF 2022 - Trade">
+          </div>
+          
+          <article class="page-content  p-2">
+          <blockquote>
+<p><strong><em>Cover Illustration source</em></strong> <a href="https://www.pixiv.net/en/artworks/112523817">https://www.pixiv.net/en/artworks/112523817</a></p>
+</blockquote>
+<p>Hello all, so i just decide to start blogging again but i don’t know what to write in this blog. So i just rewrite my old blog post into english with some adjustment and revision. :D</p>
+<p>Back in 2022 i participated alone in HTB Bussiness CTF just for fun because i curious with their <code>Cloud</code> category and it’s only 2 challenge in that category, lol.</p>
+<p>Let’s start with first challenge called <code>Trade</code>, here the challenge description:</p>
+<blockquote>
+<p>With increasing breaches there has been equal increased demand for exploits and compromised hosts. Dark APT group has released an online store to sell such digital equipment. Being part of defense operations can you help disrupting their service ?</p>
+</blockquote>
+<p>Anyway before start to solving the challenge as a context, to access the challenge i need to connect vpn that HTB platform provided. That’s why the <code>AWS</code> endpoint here kinda different that usual one. I assumed they deploy <code>AWS-like</code> services using tools called <code>localstack</code> in their own server.</p>
+<p>This challenge only give us an <code>IP address</code> which service running without any further explanation what kind of service are running. So, my first step is running <code>Nmap</code> to scan the <code>IP address</code> to know what services are running and in which port.</p>
+<p><img alt="Nmap output" src="https://blogger.googleusercontent.com/img/a/AVvXsEhHbOhc-kinMUUIWVsgMN34ZZ1t85uLTfs9WYr_zn6I91xe_babcRIvhXE_ikd9nMb0jHmcqLxa9D0H5p2D4-jSU0YzAyc2x2J-LsUj_2U8YkpXCGSgyoLeWxhnq0kXZiisQjlrQRnfWasSiytEPs9fYv6MWpXPBWF73Rc_IYBWuhNdLgBiTA0SkECE7A=w640-h260"></p>
+<p>As we can see there is 3 ports open with 3 different services running, <code>ssh server</code>,<code>http server</code> and <code>subversion</code></p>
+<p>Let’s dig dive each services running.</p>
+<h3 id="1-port-80---web-server">1. Port 80 - Web server</h3>
+<p>Open the given <code>Ip address</code> in the browser then we got this login page, just usual login page nothing special</p>
+<p><img alt="Login page" src="https://blogger.googleusercontent.com/img/a/AVvXsEgmoZT8m1Mg_huPPBDzECLvRGh30Ahv93VkF4uVGnS72NLqz9McUMOqxhEV2XTAgUhxlzI2fxskFDfHS47Cyj1P7jhcpk7RxlMq7mCRjqIUULOh-qyixLriYL936wb4Bs4-Y9L5SDihtW2GYnW4dLWZ66BXWib8F9zvZBTWMhdNbNSY5GiyuBMgg77FnA=w640-h482"></p>
+<h3 id="2-port-3690---subversion">2. Port 3690 - Subversion</h3>
+<p>Next, access to <code>subversion</code> using <code>svn</code> client. Fyi, <code>subversion</code> is <code>version control system</code> just like <code>git</code> which is tools that usually use to control our code in <code>repository</code>. So, the idea here maybe we can dump the code that running in <code>http server</code> to get some <code>credentials</code>.</p>
+<p>First, we list the repository that available in <code>subversion</code> then we <code>clone</code> the repository to our local. We found <code>/store</code> repository then <code>clone</code> to our local. We got 3 files <code>README.md</code>, <code>dynamo.py</code> and <code>sns.py</code></p>
+<p><img alt="SVN clone" src="https://blogger.googleusercontent.com/img/a/AVvXsEgPqLyLxbbVy0EsQOzaLwESf3QNueA2FMky4YAlLOpBdZ6sjBelwmuqPrEGFDFrRckLyP9ms11omNbskqh7PlUPz-y1jltf1nVp8L_FauI70l_cBBm3uEv9aT9AcX7fBaZaq3yc52wIrfjBQNVIvSm3R8dTUdv6dgt9JLlP4q0xoLLjMZJdmRpZHKJJOw=w640-h222"></p>
+<p>In <code>dynamo.py</code> file there is hard-code <code>username</code> and <code>password</code> to store in dynamodb, i assume we can use this credentials to login to login page we found earlier.</p>
+<p><img alt="Dynamo.py credentials" src="https://blogger.googleusercontent.com/img/a/AVvXsEjhPW2NW4VWe8CLBKwsknsEz7UldCJz_cp7iZ8BcKzSxVZSCo1WgNN8lnjSvg0FV21_Lfm-3L99O_BnyVtP81CCMRw53eb889ycqq6jpc11i8DIxw9jP8fG_0n_I9sz-DduUqjUHr2yYAuDEv2dEEKTqGEqNo8CRFoYufasbHy4UeGMFh9LlfamLviZcQ=w600-h640"></p>
+<p>So, i tried to login using the credentials i just found it works. But, there is another authentication that ask for our <code>OTP</code>.</p>
+<p><img alt="OTP page" src="https://blogger.googleusercontent.com/img/a/AVvXsEiE_ZYz7yk2oCz6vxO-3EJQFB_QD5XFWL_Ji6fkow_0BpSPm_KMy9sDOs6sOUKx-lSL4Z7OxEfl0FlZGkf1ifmlJCgCCL1pI3cERfKkHWlie4aCR_hw1gyxyNWbB5Kn8_Clyic_ZL7sX0lBVVXE8DXEAstC0xW12IJ3DxZJ3oCd_uvwFgfB1jszba78hg=w640-h512"></p>
+<p>Well, there is another file called <code>sns.py</code> but nothing interesting there. But, since it is stored in <code>version control system</code> maybe we can found something interesting in previous version. Check logs of the repository we found there is several modification, then try to revert one by one to check previous code version.</p>
+<p><img alt="SVN logs" src="https://blogger.googleusercontent.com/img/a/AVvXsEiXgU7vOlKKt5rA4O3xJDcZstVgC36J94OhE9IyNXvl043GeOsa8qIrHpDRgSj4oy274KfcqgaVGwFDK3KrBA-D0Ng6YzUl7d_K6CGJpp3ou0VL2eIpMiEl_GhbQGjHgh8iq0ODbVejF6A9ymQSmW6_WgAMdy89qjjcFJkAVEsv1_XP4TA0ChfvvYlywg=w640-h300"></p>
+<p>When back to revision 2, there is hard-code AWS access and secret key.</p>
+<p><img alt="Revision 2 keys" src="https://blogger.googleusercontent.com/img/a/AVvXsEg4kTrrKmggUCPutVOESoUgHTSI54rddtH3OZwiKgQ16qjeSj3uHI5eEOOZ5X9JaYLLnEZwDQoTWv86f5RxapGIi_a8JgtCHkAmTBG9q4ONOal6pp8NLwmFt4BFBCinXsErb1ROJYrfLMKN6dVdoDkQ4PO2mhmw6QcNSqbn31p4eWrUUNOxW3enhsUyQA=w640-h428"></p>
+<p>So, using those keys we can auth to <code>AWS-like</code> services. To setup i just need to add hostname <code>cloud.htb</code> with challenge <code>IP address</code> in <code>/etc/hosts</code> then use <code>cloud.htb</code> as our <code>endpoint-url</code>. Then try to list what topics that available in our account.</p>
+<p><img alt="SNS topics" src="https://blogger.googleusercontent.com/img/a/AVvXsEik6z-7Xc8fkmmRy_Vh9vkA4b9o400E16guTsJZNfRHeSZn2FzR6e5VYzWWZ5Sbx9ng7N4JnPsyIp_unVmeDwojrtR-wjXe6tAbj_buW0jy3HkqtHX4u_Mx184WqT-2RpHYxCRsgYj-GUhaZAtk_znhYhWiXR-aorRyKFOynodZ6TQGsbzGwuC2yFPbaA=w640-h184"></p>
+<p>Well, there is only 1 topic called <code>otp</code>. We need to subscribe to <code>otp</code> topic so we can continue our login. Since the service are running inside HTB network easiest way to subscribe is using <code>http</code> endpoint.</p>
+<p>The setup is simple, we just need to open port <code>80</code> in our <code>vpn IP address</code> in this case i’m using <code>nc</code> command so i can see <code>raw</code> http request. After setup done, i just subscribe the <code>otp</code> topic using command below:</p>
+<p><img alt="SNS subscribe" src="https://blogger.googleusercontent.com/img/a/AVvXsEgWqwLm5EgaoK11jvb8-8g5bmiii4h_Mv4FeX2jgyqcUsAL4yLHbcRvE2nALORkuuxqysJnVj562IRtu4U5KIKdjv5xWFOvKQuqfD-t8218nXG7Jrtt6JW35dciojoztkbWO1JCySoPGF9lQApzdQqPuPmbpGbB4XmfESGMqTAtYN_rgxm7UPEQGQARbA=w640-h76"></p>
+<p>Then, try to login again and wait the <code>otp</code> hit our <code>http endopoint</code>, get the <code>otp</code> code and continue our login.</p>
+<p><img alt="OTP received" src="https://blogger.googleusercontent.com/img/a/AVvXsEiQN8TyzbfQEf0-QfkVROBnDpj1sOgf6sWEBK5WmxzBOiYlu344PK_Dtp7IuyxGwois0cAo_P1UYDrEHvBA4y5Y-GP9yqsOJLWS6GMxomB0tziEnXo6xWvyjKmhIZZGxkWsakctA2rSVHmQSbvsDha4teZQnNltaw-Oap7Hp45L7m1aCPbva3YYHxrFuA=w640-h68"></p>
+<p>Here the website appearance after we success login.</p>
+<p><img alt="Logged in page" src="https://blogger.googleusercontent.com/img/a/AVvXsEjD5tLQiZEm0kPQ5ki2fHSlYFeuc4dU7airHCa6EQ8J6AY-XfQRz9ZnuSd4aO2vAiBZAK90FLFKfgTX0-4pAZTgJq-WGPfQd1PzgfbNiJCx3rvZnNSfyxUDGBEveLVNLJRosCekKu2bdTXiQ4cLxdXOwfpZBOsGVenQffxmcsjDJHBsetOU1reO307Pqg=w640-h338"></p>
+<p>After explore a while, i found <code>search</code> page that we can receive some <code>input</code> string. After some trial i got an error message that reveal some information while i input <code>”</code>.</p>
+<p><img alt="DynamoDB error" src="https://blogger.googleusercontent.com/img/a/AVvXsEj-47BRRmTW1eGtAdHW00ZVCjwTCIiAivTTpUVla1QuA4WSrsqrFcTr80-LyukTZe5Kc3SRmiYAnOe5JcN9t8U45-dyCCOQBbTZ7w_BemP5P7Nhd2bs_-XWDaPRqu1eJYRLcYv9BUaKtDeWqlNdb3kN9Zg3Bo1tRntFDmGKWhnHbFoJdOq6VPKy4ihE3Q=w640-h214"></p>
+<p>Look like this input handled directly to <code>dynamodb</code>. So, i just googled for maybe some <code>dynamodb</code> injection or something to dump some information from db.</p>
+<p>Well, found that we can do some injection to dump all data inside <code>dynamodb</code> and here the <code>input</code> i use to dump all data.</p>
+<p><img alt="DynamoDB injection" src="https://blogger.googleusercontent.com/img/a/AVvXsEiw5PcUhQ2-rzklb0KNUjgxsUk2YxMbb3eugO6_Lyq5hA9OY8mOY-kcPwzELzLN2UAE9BGLNfYRpg9-LjtW4DH8_B0Vdl8lxS63lHG5IJ2tqhKMTbZnHqT7QvNk2V6DUuwPFMYq4fKzI36VZy3v7qWVAhO_4HnThVXs7OlggM_X6p5h3XRVcsWVXlW-KA=w640-h42"></p>
+<p>So, we can see all data inside the database. But i still have no idea what these credential used for.</p>
+<p><img alt="Database dump" src="https://blogger.googleusercontent.com/img/a/AVvXsEhjU0LqcmbfU2IxcSyI6SaovuQa6cyYgrluirunWI7s5YPvdSgUOXqEMztPAucC4q6CASlGxa9ZO1IKQ-p7lfF3PWKRtf2APjaWHSNH9zgSmSFv3KasLyh8xrV3yY_-GW7CKb1gqIZ0IWskUteqEY2ZS20SKlYl1GyAfGFD1V9bUYXSjqnDDUaCe0FKUw=w640-h336"></p>
+<p>After a while i guess it is credentials to access the machine directly using <code>ssh</code> since it is the only services we not touching yet.</p>
+<p>Finally, when i <code>ssh</code> using username <code>mario</code> the authentication success then i just need to read <code>flag.txt</code> file. Yeaaay first challenge solved!!!</p>
+<p><img alt="SSH flag" src="https://blogger.googleusercontent.com/img/a/AVvXsEifNAc2Lpyz0UwfTEBVoYdFTfLp0YDecCVzpxMNInQKIG5plows06lR61_HmRpxoJrlN3ROd_UQ-SedEi-uFOHFEkC51mttsLJWpHKgY-0OMiP6wdut3xFznZ8HPxHHbAnj2YD7GtoYaFkecWr4W6dLQ0cmCGOKiyffxRVQtAD1upSIbq0TZ0Tw_Bg08g=w640-h208"></p>
+<p>Reference:</p>
+<ul>
+<li>
+<p><a href="https://book.hacktricks.xyz/network-services-pentesting/3690-pentesting-subversion-svn-server">https://book.hacktricks.xyz/network-services-pentesting/3690-pentesting-subversion-svn-server</a></p>
+</li>
+<li>
+<p><a href="https://tutorgeeks.blogspot.com/2019/11/publicly-exposed-aws-sns-topics.html">https://tutorgeeks.blogspot.com/2019/11/publicly-exposed-aws-sns-topics.html</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/appsecengineer/dynamodb-injection-1db99c2454ac">https://medium.com/appsecengineer/dynamodb-injection-1db99c2454ac</a></p>
+</li>
+</ul>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-port-80---web-server">1. Port 80 - Web server</a></li>
+        <li><a href="#2-port-3690---subversion">2. Port 3690 - Subversion</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              
+              <li class="list-inline-item"><a href="/tags/cloud-ctf"
+                target="_blank"
+              >cloud-ctf</a></li>
+              
+              
+              <li class="list-inline-item"><a href="/tags/cloud"
+                target="_blank"
+              >cloud</a></li>
+              
+              
+              <li class="list-inline-item"><a href="/tags/ctf"
+                target="_blank"
+              >ctf</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar =  true ;
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    
+
+
+
+  
+
+ 
+
+
+<div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/afmaghribi" target="_blank" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path id="footer-socialNetworks-github-svg-path"
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://linkedin.com/in/afmaghribi" target="_blank" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+    <a href="https://instagram.com/fauzanmaghribi" target="_blank" aria-label="instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+            <radialGradient id="yOrnnhliCrdS2gy~4tD8ma" cx="19.38" cy="42.035" r="44.899"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#fd5" />
+                <stop offset=".328" stop-color="#ff543f" />
+                <stop offset=".348" stop-color="#fc5245" />
+                <stop offset=".504" stop-color="#e64771" />
+                <stop offset=".643" stop-color="#d53e91" />
+                <stop offset=".761" stop-color="#cc39a4" />
+                <stop offset=".841" stop-color="#c837ab" />
+            </radialGradient>
+            <path fill="url(#yOrnnhliCrdS2gy~4tD8ma)"
+                d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z" />
+            <radialGradient id="yOrnnhliCrdS2gy~4tD8mb" cx="11.786" cy="5.54" r="29.813"
+                gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#4168c9" />
+                <stop offset=".999" stop-color="#4168c9" stop-opacity="0" />
+            </radialGradient>
+            <path fill="url(#yOrnnhliCrdS2gy~4tD8mb)"
+                d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z" />
+            <path fill="#fff"
+                d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z" />
+            <circle cx="31.5" cy="16.5" r="1.5" fill="#fff" />
+            <path fill="#fff"
+                d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z" />
+        </svg>
+    </a>
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+                <div class="pb-2">
+                    <a href="https://lychnobyte.my.id/" title="Ahmad Fauzzan Maghribi">
+                        <img alt="Footer logo" src="/images/logo.png"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2026  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+        document.documentElement.classList.remove('dark');
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            document.documentElement.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script>
+      
+      window.searchIndexURL = "/index.json";
+    </script>
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

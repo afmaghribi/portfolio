@@ -60,7 +60,7 @@ params:
   title: "Ahmad Fauzzan Maghribi"
   description: "Personal Portfolio of Ahmad Fauzzan Maghribi"
   # staticPath: ""  # The path to serve the static files from
-  favicon: "/fav.png"
+  favicon: "/images/logo.png"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -78,7 +78,7 @@ params:
   # Whether the fade animations on the home page will be enabled
   animate: true
 
-  theme:
+  # theme:
     # disableThemeToggle: true
     # defaultTheme: "light" # dark
 
@@ -111,8 +111,8 @@ params:
   # If you want to customize the menu, you can change it here
   navbar:
     align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
-    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
-    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandLogo: "/images/logo.png" # Logo for the brand | default is the favicon variable
+    showBrandLogo: true # Show brand logo in nav bar | default is true
     brandName: "afmaghribi" # Brand name for the brand | default is the title variable
     disableSearch: false
     # searchPlaceholder: "Search"
@@ -326,9 +326,9 @@ params:
     socialNetworks:
       github: https://github.com/afmaghribi
       linkedin: https://linkedin.com/in/afmaghribi
-      twitter: https://twitter.com
+      # twitter: https://twitter.com
       instagram: https://instagram.com/fauzanmaghribi
-      facebook: https://facebook.com
+      # facebook: https://facebook.com
 
   # List pages like blogs and posts
   listPages:

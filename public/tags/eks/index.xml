@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eks on Ahmad Fauzzan Maghribi</title>
+    <link>https://lychnobyte.my.id/tags/eks/</link>
+    <description>Recent content in Eks on Ahmad Fauzzan Maghribi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 16 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lychnobyte.my.id/tags/eks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EKS Cluster Games All Solution</title>
+      <link>https://lychnobyte.my.id/blogs/eks-cluster-games-all-solution/</link>
+      <pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/blogs/eks-cluster-games-all-solution/</guid>
+      <description>Cover Illustration source https://www.pixiv.net/en/artworks/128345987&#xA;Helloo every-nyan ≽^•⩊•^≼&#xA;Yet another post talk about cloud security challenges! This time specifically about kubernetes cluster that deployed using AWS EKS!&#xA;The challenge still up and running at https://eksclustergames.com/&#xA;This platform also using wargames style with 5 level challenges!&#xA;So, without further ado let’s start to solve those challenges!&#xA;1. Secret Seeker First challenge description&#xA;Jumpstart your quest by listing all the secrets in the cluster.</description>
+    </item>
+  </channel>
+</rss>

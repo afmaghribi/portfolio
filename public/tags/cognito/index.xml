@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cognito on Ahmad Fauzzan Maghribi</title>
+    <link>https://lychnobyte.my.id/tags/cognito/</link>
+    <description>Recent content in Cognito on Ahmad Fauzzan Maghribi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lychnobyte.my.id/tags/cognito/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Big IAM Challenge All Solution</title>
+      <link>https://lychnobyte.my.id/blogs/the-big-iam-challenge-all-solution/</link>
+      <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/blogs/the-big-iam-challenge-all-solution/</guid>
+      <description>Cover Illustration source https://www.pixiv.net/en/artworks/104049290&#xA;Hello all, let’s continue to solve another cloud security challenges!&#xA;This opportunity i’ll write solution for challenges in The Big IAM challenge platform. The challenges still up and running can access at https://thebigiamchallenge.com/.&#xA;The platform only has 6 simple AWS challenges with wargames style which is we need to solve the challenge in sequence from 1 to 6.&#xA;Since all the challenges i could say pretty simple and straightforward so i decide to post all solution in one post only.</description>
+    </item>
+  </channel>
+</rss>

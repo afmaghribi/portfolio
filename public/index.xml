@@ -2,256 +2,270 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ahmad Fauzzan Maghribi</title>
-    <link>http://localhost:1313/</link>
+    <link>https://lychnobyte.my.id/</link>
     <description>Recent content on Ahmad Fauzzan Maghribi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 09 Dec 2022 19:53:33 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lychnobyte.my.id/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Certified Kubernetes Security Specialist (CKS)</title>
-      <link>http://localhost:1313/certifications/certified-kubernetes-security-specialist-cks/</link>
+      <link>https://lychnobyte.my.id/certifications/certified-kubernetes-security-specialist-cks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/certifications/certified-kubernetes-security-specialist-cks/</guid>
+      <guid>https://lychnobyte.my.id/certifications/certified-kubernetes-security-specialist-cks/</guid>
       <description></description>
     </item>
     <item>
       <title>Certified Kubernetes Administrator (CKA)</title>
-      <link>http://localhost:1313/certifications/certified-kubernetes-administrator-cka/</link>
+      <link>https://lychnobyte.my.id/certifications/certified-kubernetes-administrator-cka/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/certifications/certified-kubernetes-administrator-cka/</guid>
+      <guid>https://lychnobyte.my.id/certifications/certified-kubernetes-administrator-cka/</guid>
       <description></description>
     </item>
     <item>
       <title>Certified Kubernetes Application Developer (CKAD)</title>
-      <link>http://localhost:1313/certifications/certified-kubernetes-application-developer-ckad/</link>
+      <link>https://lychnobyte.my.id/certifications/certified-kubernetes-application-developer-ckad/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/certifications/certified-kubernetes-application-developer-ckad/</guid>
+      <guid>https://lychnobyte.my.id/certifications/certified-kubernetes-application-developer-ckad/</guid>
       <description></description>
     </item>
     <item>
       <title>GCP Professional Cloud Engineer</title>
-      <link>http://localhost:1313/certifications/gcp-professional-cloud-engineer/</link>
+      <link>https://lychnobyte.my.id/certifications/gcp-professional-cloud-engineer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/certifications/gcp-professional-cloud-engineer/</guid>
+      <guid>https://lychnobyte.my.id/certifications/gcp-professional-cloud-engineer/</guid>
       <description></description>
     </item>
     <item>
       <title>GCP Associate Cloud Engineer</title>
-      <link>http://localhost:1313/certifications/gcp-associate-cloud-engineer/</link>
+      <link>https://lychnobyte.my.id/certifications/gcp-associate-cloud-engineer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/certifications/gcp-associate-cloud-engineer/</guid>
+      <guid>https://lychnobyte.my.id/certifications/gcp-associate-cloud-engineer/</guid>
       <description></description>
     </item>
     <item>
       <title>CompTIA PenTest&#43;</title>
-      <link>http://localhost:1313/certifications/comptia-pentestplus/</link>
+      <link>https://lychnobyte.my.id/certifications/comptia-pentestplus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/certifications/comptia-pentestplus/</guid>
+      <guid>https://lychnobyte.my.id/certifications/comptia-pentestplus/</guid>
       <description></description>
     </item>
     <item>
       <title>AWS Certified Cloud Practitioner</title>
-      <link>http://localhost:1313/certifications/aws-certified-cloud-practitioner/</link>
+      <link>https://lychnobyte.my.id/certifications/aws-certified-cloud-practitioner/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/certifications/aws-certified-cloud-practitioner/</guid>
+      <guid>https://lychnobyte.my.id/certifications/aws-certified-cloud-practitioner/</guid>
       <description></description>
     </item>
     <item>
       <title>Certificate of Cloud Security Knowledge (CCSK) v4</title>
-      <link>http://localhost:1313/certifications/certificate-of-cloud-security-knowledge-ccsk-v4/</link>
+      <link>https://lychnobyte.my.id/certifications/certificate-of-cloud-security-knowledge-ccsk-v4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/certifications/certificate-of-cloud-security-knowledge-ccsk-v4/</guid>
+      <guid>https://lychnobyte.my.id/certifications/certificate-of-cloud-security-knowledge-ccsk-v4/</guid>
       <description></description>
     </item>
     <item>
       <title>Certified Secure Computer User (CSCU)</title>
-      <link>http://localhost:1313/certifications/certified-secure-computer-user-cscu/</link>
+      <link>https://lychnobyte.my.id/certifications/certified-secure-computer-user-cscu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/certifications/certified-secure-computer-user-cscu/</guid>
+      <guid>https://lychnobyte.my.id/certifications/certified-secure-computer-user-cscu/</guid>
       <description></description>
     </item>
     <item>
       <title>Alibaba Cloud Professional (ACP) Cloud Computing</title>
-      <link>http://localhost:1313/certifications/alibaba-cloud-professional-acp-cloud-computing/</link>
+      <link>https://lychnobyte.my.id/certifications/alibaba-cloud-professional-acp-cloud-computing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/certifications/alibaba-cloud-professional-acp-cloud-computing/</guid>
+      <guid>https://lychnobyte.my.id/certifications/alibaba-cloud-professional-acp-cloud-computing/</guid>
       <description></description>
     </item>
     <item>
       <title>Alibaba Cloud Associate (ACA) Cloud Security</title>
-      <link>http://localhost:1313/certifications/alibaba-cloud-associate-aca-cloud-security/</link>
+      <link>https://lychnobyte.my.id/certifications/alibaba-cloud-associate-aca-cloud-security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/certifications/alibaba-cloud-associate-aca-cloud-security/</guid>
+      <guid>https://lychnobyte.my.id/certifications/alibaba-cloud-associate-aca-cloud-security/</guid>
       <description></description>
     </item>
     <item>
       <title>Alibaba Cloud Associate (ACA) Cloud Computing</title>
-      <link>http://localhost:1313/certifications/alibaba-cloud-associate-aca-cloud-computing/</link>
+      <link>https://lychnobyte.my.id/certifications/alibaba-cloud-associate-aca-cloud-computing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/certifications/alibaba-cloud-associate-aca-cloud-computing/</guid>
+      <guid>https://lychnobyte.my.id/certifications/alibaba-cloud-associate-aca-cloud-computing/</guid>
       <description></description>
     </item>
     <item>
       <title>HCIA Cloud Computing</title>
-      <link>http://localhost:1313/certifications/hcia-cloud-computing/</link>
+      <link>https://lychnobyte.my.id/certifications/hcia-cloud-computing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/certifications/hcia-cloud-computing/</guid>
+      <guid>https://lychnobyte.my.id/certifications/hcia-cloud-computing/</guid>
       <description></description>
     </item>
     <item>
       <title>HCIA Datacom</title>
-      <link>http://localhost:1313/certifications/hcia-routing--switching/</link>
+      <link>https://lychnobyte.my.id/certifications/hcia-routing--switching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/certifications/hcia-routing--switching/</guid>
+      <guid>https://lychnobyte.my.id/certifications/hcia-routing--switching/</guid>
       <description></description>
     </item>
     <item>
       <title>MikroTik Certified Routing Engineer (MTCRE)</title>
-      <link>http://localhost:1313/certifications/mikrotik-certified-routing-engineer-mtcre/</link>
+      <link>https://lychnobyte.my.id/certifications/mikrotik-certified-routing-engineer-mtcre/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/certifications/mikrotik-certified-routing-engineer-mtcre/</guid>
+      <guid>https://lychnobyte.my.id/certifications/mikrotik-certified-routing-engineer-mtcre/</guid>
       <description></description>
     </item>
     <item>
       <title>MikroTik Certified Network Associate (MTCNA)</title>
-      <link>http://localhost:1313/certifications/mikrotik-certified-network-associate-mtcna/</link>
+      <link>https://lychnobyte.my.id/certifications/mikrotik-certified-network-associate-mtcna/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/certifications/mikrotik-certified-network-associate-mtcna/</guid>
+      <guid>https://lychnobyte.my.id/certifications/mikrotik-certified-network-associate-mtcna/</guid>
       <description></description>
     </item>
     <item>
       <title>JLPT N5</title>
-      <link>http://localhost:1313/certifications/jlpt-n5/</link>
+      <link>https://lychnobyte.my.id/certifications/jlpt-n5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/certifications/jlpt-n5/</guid>
+      <guid>https://lychnobyte.my.id/certifications/jlpt-n5/</guid>
       <description></description>
     </item>
     <item>
-      <title>Render Math With Mathjax</title>
-      <link>http://localhost:1313/blogs/math/</link>
-      <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/blogs/math/</guid>
-      <description>Mathjax Math equations can be rendered using Mathjax syntax with AMS symbol support.&#xA;Optionally enable this on a per-page basis by adding mathjax: true to your frontmatter.&#xA;Then, use $$ ... $$ on a line by itself to render a block equation:&#xA;$$ | Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow P_{2}} [A(x) = 1] | &amp;lt; \text{negligible} $$&#xA;The raw version is:&#xA;$$ | Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow P_{2}} [A(x) = 1] | &amp;lt; \text{negligible} $$ Write in-line equations with \\( .</description>
+      <title>EKS Cluster Games All Solution</title>
+      <link>https://lychnobyte.my.id/blogs/eks-cluster-games-all-solution/</link>
+      <pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/blogs/eks-cluster-games-all-solution/</guid>
+      <description>Cover Illustration source https://www.pixiv.net/en/artworks/128345987&#xA;Helloo every-nyan ≽^•⩊•^≼&#xA;Yet another post talk about cloud security challenges! This time specifically about kubernetes cluster that deployed using AWS EKS!&#xA;The challenge still up and running at https://eksclustergames.com/&#xA;This platform also using wargames style with 5 level challenges!&#xA;So, without further ado let’s start to solve those challenges!&#xA;1. Secret Seeker First challenge description&#xA;Jumpstart your quest by listing all the secrets in the cluster.</description>
+    </item>
+    <item>
+      <title>The Big IAM Challenge All Solution</title>
+      <link>https://lychnobyte.my.id/blogs/the-big-iam-challenge-all-solution/</link>
+      <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/blogs/the-big-iam-challenge-all-solution/</guid>
+      <description>Cover Illustration source https://www.pixiv.net/en/artworks/104049290&#xA;Hello all, let’s continue to solve another cloud security challenges!&#xA;This opportunity i’ll write solution for challenges in The Big IAM challenge platform. The challenges still up and running can access at https://thebigiamchallenge.com/.&#xA;The platform only has 6 simple AWS challenges with wargames style which is we need to solve the challenge in sequence from 1 to 6.&#xA;Since all the challenges i could say pretty simple and straightforward so i decide to post all solution in one post only.</description>
+    </item>
+    <item>
+      <title>Cloud Security Championship - Perimeter Leak (June)</title>
+      <link>https://lychnobyte.my.id/blogs/cloud-security-championship-perimeter-leak-june/</link>
+      <pubDate>Fri, 11 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/blogs/cloud-security-championship-perimeter-leak-june/</guid>
+      <description>Cover Illustration source https://www.pixiv.net/en/artworks/91119415&#xA;Hello folks! Let’s talk again about cloud security challenges!&#xA;This time i’ll write about my solution for challenge in Cloud Security Championship platform. The platform and the challenge are still up you access here at https://cloudsecuritychampionship.com/. So, basically the platform will release 1 challenge per month for 1 whole year so there will be a total of 12 challenges.&#xA;Fyi, the challenges author is Scott Piper.</description>
+    </item>
+    <item>
+      <title>My Own Challenge - That Day</title>
+      <link>https://lychnobyte.my.id/blogs/my-own-challenge-that-day/</link>
+      <pubDate>Wed, 09 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/blogs/my-own-challenge-that-day/</guid>
+      <description>Cover Illustration source https://www.pixiv.net/en/artworks/104822829&#xA;Hello all, let’s continue to my second challenge called That Day. This challenge is about get access to kubernetes cluster. Here the challenge description&#xA;But perhaps you hate a thing and it&amp;rsquo;s good for you And perhaps you love a thing and it&amp;rsquo;s bad for you :&#39;)&#xA;http://foryou.lychnobyte.my.id&#xA;So, this challenge was once deployed in VPS and attached with my domain but now the challenge is down.</description>
+    </item>
+    <item>
+      <title>My Own Challenge - Last Forever</title>
+      <link>https://lychnobyte.my.id/blogs/my-own-challenge-last-forever/</link>
+      <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/blogs/my-own-challenge-last-forever/</guid>
+      <description>Cover Illustration source https://www.pixiv.net/en/artworks/97570152&#xA;Hello all, i will continue write about cloud ctf challenges. But, instead of solving challenges from ctf competition out there. In this post i talk about my own challenges. Well, the challenges was listed on one of ctf playground platform but now the platform itself is closed so i decide to write about it.&#xA;(yapping) unrelated with challengeWell, this is just personal note regarding the challenges i created.</description>
+    </item>
+    <item>
+      <title>HTB Business CTF 2022 - Operator</title>
+      <link>https://lychnobyte.my.id/blogs/htb-business-ctf-2022-operator/</link>
+      <pubDate>Tue, 24 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/blogs/htb-business-ctf-2022-operator/</guid>
+      <description>Cover Illustration source https://www.pixiv.net/en/artworks/89193760&#xA;Alright, let’s continues to 2nd challenge called Operator. Here is the challenge description:&#xA;We have located Monkey Business operator blog where they are leaking personal informations. We would like you to break into their system and figure out a way to gain full control.&#xA;Just like previous challenge we only got an IP address. So i just running Nmap to scan the IP address to know what services are running and in which port.</description>
+    </item>
+    <item>
+      <title>HTB Business CTF 2022 - Trade</title>
+      <link>https://lychnobyte.my.id/blogs/htb-business-ctf-2022-trade/</link>
+      <pubDate>Mon, 23 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/blogs/htb-business-ctf-2022-trade/</guid>
+      <description>Cover Illustration source https://www.pixiv.net/en/artworks/112523817&#xA;Hello all, so i just decide to start blogging again but i don’t know what to write in this blog. So i just rewrite my old blog post into english with some adjustment and revision. :D&#xA;Back in 2022 i participated alone in HTB Bussiness CTF just for fun because i curious with their Cloud category and it’s only 2 challenge in that category, lol.</description>
     </item>
     <item>
       <title>Renderizar Matemáticas con Mathjax</title>
-      <link>http://localhost:1313/es/blogs/math/</link>
+      <link>https://lychnobyte.my.id/es/blogs/math/</link>
       <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/es/blogs/math/</guid>
+      <guid>https://lychnobyte.my.id/es/blogs/math/</guid>
       <description>Mathjax Las ecuaciones matemáticas se pueden renderizar usando la sintaxis de Mathjax con soporte de símbolos AMS.&#xA;Opcionalmente, habilita esto por página agregando mathjax: true a tu frontmatter.&#xA;Luego, usa $$ ... $$ en una línea por sí sola para renderizar una ecuación de bloque:&#xA;$$ | Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow P_{2}} [A(x) = 1] | &amp;lt; \text{negligible} $$&#xA;La versión sin procesar es:&#xA;$$ | Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow P_{2}} [A(x) = 1] | &amp;lt; \text{negligible} $$ Escribe ecuaciones en línea con \\( .</description>
     </item>
     <item>
       <title>Rendre les Mathématiques avec Mathjax</title>
-      <link>http://localhost:1313/fr/blogs/math/</link>
+      <link>https://lychnobyte.my.id/fr/blogs/math/</link>
       <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/fr/blogs/math/</guid>
+      <guid>https://lychnobyte.my.id/fr/blogs/math/</guid>
       <description>Mathjax Les équations mathématiques peuvent être rendues en utilisant la syntaxe Mathjax avec le support des symboles AMS.&#xA;Activez ceci de manière optionnelle page par page en ajoutant mathjax: true à votre frontmatter.&#xA;Ensuite, utilisez $$ ... $$ sur une ligne par elle-même pour rendre une équation de bloc:&#xA;$$ | Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow P_{2}} [A(x) = 1] | &amp;lt; \text{negligible} $$&#xA;La version brute est:</description>
     </item>
     <item>
       <title>Galería de Imágenes</title>
-      <link>http://localhost:1313/es/gallery/</link>
+      <link>https://lychnobyte.my.id/es/gallery/</link>
       <pubDate>Sat, 25 Jun 2022 18:35:46 +0530</pubDate>
-      <guid>http://localhost:1313/es/gallery/</guid>
+      <guid>https://lychnobyte.my.id/es/gallery/</guid>
       <description></description>
     </item>
     <item>
       <title>Galerie d&#39;Images</title>
-      <link>http://localhost:1313/fr/gallery/</link>
+      <link>https://lychnobyte.my.id/fr/gallery/</link>
       <pubDate>Sat, 25 Jun 2022 18:35:46 +0530</pubDate>
-      <guid>http://localhost:1313/fr/gallery/</guid>
+      <guid>https://lychnobyte.my.id/fr/gallery/</guid>
       <description></description>
     </item>
     <item>
       <title>Image Gallery</title>
-      <link>http://localhost:1313/gallery/</link>
+      <link>https://lychnobyte.my.id/gallery/</link>
       <pubDate>Sat, 25 Jun 2022 18:35:46 +0530</pubDate>
-      <guid>http://localhost:1313/gallery/</guid>
+      <guid>https://lychnobyte.my.id/gallery/</guid>
       <description></description>
     </item>
     <item>
-      <title>Markdown Syntax</title>
-      <link>http://localhost:1313/blogs/markdown-syntax/</link>
-      <pubDate>Sat, 03 Apr 2021 23:29:21 +0530</pubDate>
-      <guid>http://localhost:1313/blogs/markdown-syntax/</guid>
-      <description>Paragraph Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga.</description>
-    </item>
-    <item>
       <title>Sintaxis de Markdown</title>
-      <link>http://localhost:1313/es/blogs/markdown-syntax/</link>
+      <link>https://lychnobyte.my.id/es/blogs/markdown-syntax/</link>
       <pubDate>Sat, 03 Apr 2021 23:29:21 +0530</pubDate>
-      <guid>http://localhost:1313/es/blogs/markdown-syntax/</guid>
+      <guid>https://lychnobyte.my.id/es/blogs/markdown-syntax/</guid>
       <description>Párrafo Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga.</description>
     </item>
     <item>
       <title>Syntaxe Markdown</title>
-      <link>http://localhost:1313/fr/blogs/markdown-syntax/</link>
+      <link>https://lychnobyte.my.id/fr/blogs/markdown-syntax/</link>
       <pubDate>Sat, 03 Apr 2021 23:29:21 +0530</pubDate>
-      <guid>http://localhost:1313/fr/blogs/markdown-syntax/</guid>
+      <guid>https://lychnobyte.my.id/fr/blogs/markdown-syntax/</guid>
       <description>Paragraphe Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga.</description>
     </item>
     <item>
-      <title>Emoji Support</title>
-      <link>http://localhost:1313/blogs/emoji-support/</link>
-      <pubDate>Sat, 03 Apr 2021 22:53:58 +0530</pubDate>
-      <guid>http://localhost:1313/blogs/emoji-support/</guid>
-      <description>Emoji can be enabled in a Hugo project in a number of ways. :zap:&#xA;Emoji Support The emojify function can be called directly in templates or Inline Shortcodes.&#xA;To enable emoji globally, set enableEmoji to true in your site’s configuration and then you can type emoji shorthand codes directly in content files; e.g.&#xA;The Emoji cheat sheet is a useful reference for emoji shorthand codes.&#xA;N.B. The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform.</description>
-    </item>
-    <item>
       <title>Soporte de Emoji</title>
-      <link>http://localhost:1313/es/blogs/emoji-support/</link>
+      <link>https://lychnobyte.my.id/es/blogs/emoji-support/</link>
       <pubDate>Sat, 03 Apr 2021 22:53:58 +0530</pubDate>
-      <guid>http://localhost:1313/es/blogs/emoji-support/</guid>
+      <guid>https://lychnobyte.my.id/es/blogs/emoji-support/</guid>
       <description>Los emoji se pueden habilitar en un proyecto Hugo de varias maneras. :zap:&#xA;Soporte de Emoji La función emojify se puede llamar directamente en las plantillas o Shortcodes en línea.&#xA;Para habilitar emoji globalmente, establece enableEmoji en true en la configuración de tu sitio y luego puedes escribir códigos abreviados de emoji directamente en los archivos de contenido; por ejemplo:&#xA;La Hoja de trucos de Emoji es una referencia útil para los códigos abreviados de emoji.</description>
     </item>
     <item>
       <title>Support des Emoji</title>
-      <link>http://localhost:1313/fr/blogs/emoji-support/</link>
+      <link>https://lychnobyte.my.id/fr/blogs/emoji-support/</link>
       <pubDate>Sat, 03 Apr 2021 22:53:58 +0530</pubDate>
-      <guid>http://localhost:1313/fr/blogs/emoji-support/</guid>
+      <guid>https://lychnobyte.my.id/fr/blogs/emoji-support/</guid>
       <description>Les emoji peuvent être activés dans un projet Hugo de plusieurs façons. :zap:&#xA;Support des Emoji La fonction emojify peut être appelée directement dans les modèles ou les Shortcodes en ligne.&#xA;Pour activer les emoji globalement, définissez enableEmoji sur true dans la configuration de votre site, puis vous pouvez taper les codes abrégés d&amp;rsquo;emoji directement dans les fichiers de contenu; par exemple :&#xA;La Feuille de triche Emoji est une référence utile pour les codes abrégés d&amp;rsquo;emoji.</description>
     </item>
     <item>
-      <title>Placeholder Text</title>
-      <link>http://localhost:1313/blogs/placeholder-text/</link>
-      <pubDate>Sat, 03 Apr 2021 22:41:10 +0530</pubDate>
-      <guid>http://localhost:1313/blogs/placeholder-text/</guid>
-      <description>Lorem est tota propiore conpellat pectoribus de pectora summo.&#xA;Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.&#xA;Exierant elisi ambit vivere dedere Duce pollice Eris modo Spargitque ferrea quos palude Rursus nulli murmur; hastile inridet ut ab gravi sententia!</description>
-    </item>
-    <item>
       <title>Texte de Remplissage</title>
-      <link>http://localhost:1313/fr/blogs/placeholder-text/</link>
+      <link>https://lychnobyte.my.id/fr/blogs/placeholder-text/</link>
       <pubDate>Sat, 03 Apr 2021 22:41:10 +0530</pubDate>
-      <guid>http://localhost:1313/fr/blogs/placeholder-text/</guid>
+      <guid>https://lychnobyte.my.id/fr/blogs/placeholder-text/</guid>
       <description>Lorem est tota propiore conpellat pectoribus de pectora summo.&#xA;Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.&#xA;Exierant elisi ambit vivere dedere Duce pollice Eris modo Spargitque ferrea quos palude Rursus nulli murmur; hastile inridet ut ab gravi sententia!</description>
     </item>
     <item>
       <title>Texto de Relleno</title>
-      <link>http://localhost:1313/es/blogs/placeholder-text/</link>
+      <link>https://lychnobyte.my.id/es/blogs/placeholder-text/</link>
       <pubDate>Sat, 03 Apr 2021 22:41:10 +0530</pubDate>
-      <guid>http://localhost:1313/es/blogs/placeholder-text/</guid>
+      <guid>https://lychnobyte.my.id/es/blogs/placeholder-text/</guid>
       <description>Lorem est tota propiore conpellat pectoribus de pectora summo.&#xA;Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.&#xA;Exierant elisi ambit vivere dedere Duce pollice Eris modo Spargitque ferrea quos palude Rursus nulli murmur; hastile inridet ut ab gravi sententia!</description>
     </item>
     <item>
       <title>Contenido Enriquecido</title>
-      <link>http://localhost:1313/es/blogs/rich-content/</link>
+      <link>https://lychnobyte.my.id/es/blogs/rich-content/</link>
       <pubDate>Sat, 03 Apr 2021 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/es/blogs/rich-content/</guid>
+      <guid>https://lychnobyte.my.id/es/blogs/rich-content/</guid>
       <description>Hugo viene con varios Shortcodes Integrados para contenido enriquecido, junto con una Configuración de Privacidad y un conjunto de Shortcodes Simples que habilitan versiones estáticas y sin JS de varias incrustaciones de redes sociales.&#xA;Shortcode Simple de X {{&amp;lt; tweet user=&amp;#34;GoHugoIO&amp;#34; id=&amp;#34;1315233626070503424&amp;#34; &amp;gt;}} Shortcode Simple de Vimeo {{&amp;lt; vimeo 146022717 &amp;gt;}} Shortcode gist {{&amp;lt; gist spf13 7896402 &amp;gt;}} </description>
     </item>
     <item>
       <title>Contenu Enrichi</title>
-      <link>http://localhost:1313/fr/blogs/rich-content/</link>
+      <link>https://lychnobyte.my.id/fr/blogs/rich-content/</link>
       <pubDate>Sat, 03 Apr 2021 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/fr/blogs/rich-content/</guid>
+      <guid>https://lychnobyte.my.id/fr/blogs/rich-content/</guid>
       <description>Hugo est livré avec plusieurs Shortcodes Intégrés pour le contenu enrichi, ainsi qu&amp;rsquo;une Configuration de Confidentialité et un ensemble de Shortcodes Simples qui permettent des versions statiques et sans JS de diverses intégrations de médias sociaux.&#xA;Shortcode Simple X {{&amp;lt; tweet user=&amp;#34;GoHugoIO&amp;#34; id=&amp;#34;1315233626070503424&amp;#34; &amp;gt;}} Shortcode Simple Vimeo {{&amp;lt; vimeo 146022717 &amp;gt;}} Shortcode gist {{&amp;lt; gist spf13 7896402 &amp;gt;}} </description>
-    </item>
-    <item>
-      <title>Rich Content</title>
-      <link>http://localhost:1313/blogs/rich-content/</link>
-      <pubDate>Sat, 03 Apr 2021 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/blogs/rich-content/</guid>
-      <description>Hugo ships with several Embedded Shortcodes for rich content, along with a Privacy Config and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&#xA;X Simple Shortcode {{&amp;lt; tweet user=&amp;#34;GoHugoIO&amp;#34; id=&amp;#34;1315233626070503424&amp;#34; &amp;gt;}} Profile is a customizable single-page portfolio theme for Hugo featuring a contact form and blog. Made by @gurusabarishh.https://t.co/KwYcwfdy16&#xA;&amp;mdash; GoHugo.io (@GoHugoIO) October 11, 2020 Vimeo Simple Shortcode {{&amp;lt; vimeo 146022717 &amp;gt;}} Youtube Simple Shortcode {{&amp;lt; youtube w7Ft2ymGmfc &amp;gt;}} Theme Custom Shortcodes These shortcodes are not Hugo built-ins, but are provided by the theme.</description>
     </item>
   </channel>
 </rss>

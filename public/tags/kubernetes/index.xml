@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubernetes on Ahmad Fauzzan Maghribi</title>
+    <link>https://lychnobyte.my.id/tags/kubernetes/</link>
+    <description>Recent content in Kubernetes on Ahmad Fauzzan Maghribi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 16 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lychnobyte.my.id/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EKS Cluster Games All Solution</title>
+      <link>https://lychnobyte.my.id/blogs/eks-cluster-games-all-solution/</link>
+      <pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/blogs/eks-cluster-games-all-solution/</guid>
+      <description>Cover Illustration source https://www.pixiv.net/en/artworks/128345987&#xA;Helloo every-nyan ≽^•⩊•^≼&#xA;Yet another post talk about cloud security challenges! This time specifically about kubernetes cluster that deployed using AWS EKS!&#xA;The challenge still up and running at https://eksclustergames.com/&#xA;This platform also using wargames style with 5 level challenges!&#xA;So, without further ado let’s start to solve those challenges!&#xA;1. Secret Seeker First challenge description&#xA;Jumpstart your quest by listing all the secrets in the cluster.</description>
+    </item>
+    <item>
+      <title>My Own Challenge - That Day</title>
+      <link>https://lychnobyte.my.id/blogs/my-own-challenge-that-day/</link>
+      <pubDate>Wed, 09 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/blogs/my-own-challenge-that-day/</guid>
+      <description>Cover Illustration source https://www.pixiv.net/en/artworks/104822829&#xA;Hello all, let’s continue to my second challenge called That Day. This challenge is about get access to kubernetes cluster. Here the challenge description&#xA;But perhaps you hate a thing and it&amp;rsquo;s good for you And perhaps you love a thing and it&amp;rsquo;s bad for you :&#39;)&#xA;http://foryou.lychnobyte.my.id&#xA;So, this challenge was once deployed in VPS and attached with my domain but now the challenge is down.</description>
+    </item>
+  </channel>
+</rss>

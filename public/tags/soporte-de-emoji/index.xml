@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Soporte De Emoji on Ahmad Fauzzan Maghribi</title>
-    <link>http://localhost:1313/tags/soporte-de-emoji/</link>
+    <link>https://lychnobyte.my.id/tags/soporte-de-emoji/</link>
     <description>Recent content in Soporte De Emoji on Ahmad Fauzzan Maghribi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 03 Apr 2021 22:53:58 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/soporte-de-emoji/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lychnobyte.my.id/tags/soporte-de-emoji/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Soporte de Emoji</title>
-      <link>http://localhost:1313/es/blogs/emoji-support/</link>
+      <link>https://lychnobyte.my.id/es/blogs/emoji-support/</link>
       <pubDate>Sat, 03 Apr 2021 22:53:58 +0530</pubDate>
-      <guid>http://localhost:1313/es/blogs/emoji-support/</guid>
+      <guid>https://lychnobyte.my.id/es/blogs/emoji-support/</guid>
       <description>Los emoji se pueden habilitar en un proyecto Hugo de varias maneras. :zap:&#xA;Soporte de Emoji La función emojify se puede llamar directamente en las plantillas o Shortcodes en línea.&#xA;Para habilitar emoji globalmente, establece enableEmoji en true en la configuración de tu sitio y luego puedes escribir códigos abreviados de emoji directamente en los archivos de contenido; por ejemplo:&#xA;La Hoja de trucos de Emoji es una referencia útil para los códigos abreviados de emoji.</description>
     </item>
   </channel>

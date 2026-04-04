@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ssrf on Ahmad Fauzzan Maghribi</title>
+    <link>https://lychnobyte.my.id/tags/ssrf/</link>
+    <description>Recent content in Ssrf on Ahmad Fauzzan Maghribi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 11 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lychnobyte.my.id/tags/ssrf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud Security Championship - Perimeter Leak (June)</title>
+      <link>https://lychnobyte.my.id/blogs/cloud-security-championship-perimeter-leak-june/</link>
+      <pubDate>Fri, 11 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/blogs/cloud-security-championship-perimeter-leak-june/</guid>
+      <description>Cover Illustration source https://www.pixiv.net/en/artworks/91119415&#xA;Hello folks! Let’s talk again about cloud security challenges!&#xA;This time i’ll write about my solution for challenge in Cloud Security Championship platform. The platform and the challenge are still up you access here at https://cloudsecuritychampionship.com/. So, basically the platform will release 1 challenge per month for 1 whole year so there will be a total of 12 challenges.&#xA;Fyi, the challenges author is Scott Piper.</description>
+    </item>
+  </channel>
+</rss>

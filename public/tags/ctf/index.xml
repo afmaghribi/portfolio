@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ctf on Ahmad Fauzzan Maghribi</title>
+    <link>https://lychnobyte.my.id/tags/ctf/</link>
+    <description>Recent content in Ctf on Ahmad Fauzzan Maghribi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 11 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lychnobyte.my.id/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud Security Championship - Perimeter Leak (June)</title>
+      <link>https://lychnobyte.my.id/blogs/cloud-security-championship-perimeter-leak-june/</link>
+      <pubDate>Fri, 11 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/blogs/cloud-security-championship-perimeter-leak-june/</guid>
+      <description>Cover Illustration source https://www.pixiv.net/en/artworks/91119415&#xA;Hello folks! Let’s talk again about cloud security challenges!&#xA;This time i’ll write about my solution for challenge in Cloud Security Championship platform. The platform and the challenge are still up you access here at https://cloudsecuritychampionship.com/. So, basically the platform will release 1 challenge per month for 1 whole year so there will be a total of 12 challenges.&#xA;Fyi, the challenges author is Scott Piper.</description>
+    </item>
+    <item>
+      <title>My Own Challenge - That Day</title>
+      <link>https://lychnobyte.my.id/blogs/my-own-challenge-that-day/</link>
+      <pubDate>Wed, 09 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/blogs/my-own-challenge-that-day/</guid>
+      <description>Cover Illustration source https://www.pixiv.net/en/artworks/104822829&#xA;Hello all, let’s continue to my second challenge called That Day. This challenge is about get access to kubernetes cluster. Here the challenge description&#xA;But perhaps you hate a thing and it&amp;rsquo;s good for you And perhaps you love a thing and it&amp;rsquo;s bad for you :&#39;)&#xA;http://foryou.lychnobyte.my.id&#xA;So, this challenge was once deployed in VPS and attached with my domain but now the challenge is down.</description>
+    </item>
+    <item>
+      <title>My Own Challenge - Last Forever</title>
+      <link>https://lychnobyte.my.id/blogs/my-own-challenge-last-forever/</link>
+      <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/blogs/my-own-challenge-last-forever/</guid>
+      <description>Cover Illustration source https://www.pixiv.net/en/artworks/97570152&#xA;Hello all, i will continue write about cloud ctf challenges. But, instead of solving challenges from ctf competition out there. In this post i talk about my own challenges. Well, the challenges was listed on one of ctf playground platform but now the platform itself is closed so i decide to write about it.&#xA;(yapping) unrelated with challengeWell, this is just personal note regarding the challenges i created.</description>
+    </item>
+    <item>
+      <title>HTB Business CTF 2022 - Operator</title>
+      <link>https://lychnobyte.my.id/blogs/htb-business-ctf-2022-operator/</link>
+      <pubDate>Tue, 24 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/blogs/htb-business-ctf-2022-operator/</guid>
+      <description>Cover Illustration source https://www.pixiv.net/en/artworks/89193760&#xA;Alright, let’s continues to 2nd challenge called Operator. Here is the challenge description:&#xA;We have located Monkey Business operator blog where they are leaking personal informations. We would like you to break into their system and figure out a way to gain full control.&#xA;Just like previous challenge we only got an IP address. So i just running Nmap to scan the IP address to know what services are running and in which port.</description>
+    </item>
+    <item>
+      <title>HTB Business CTF 2022 - Trade</title>
+      <link>https://lychnobyte.my.id/blogs/htb-business-ctf-2022-trade/</link>
+      <pubDate>Mon, 23 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://lychnobyte.my.id/blogs/htb-business-ctf-2022-trade/</guid>
+      <description>Cover Illustration source https://www.pixiv.net/en/artworks/112523817&#xA;Hello all, so i just decide to start blogging again but i don’t know what to write in this blog. So i just rewrite my old blog post into english with some adjustment and revision. :D&#xA;Back in 2022 i participated alone in HTB Bussiness CTF just for fun because i curious with their Cloud category and it’s only 2 challenge in that category, lol.</description>
+    </item>
+  </channel>
+</rss>
