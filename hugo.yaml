@@ -135,7 +135,7 @@ params:
     title: "Ahmad Fauzzan Maghribi"
     subtitle: "Cloud Engineer"
     content: |-
-      I am a Cloud Engineer with experience in OpenStack, AWS, and GCP, focusing on Kubernetes security and infrastructure automation. I enjoy learning and working with modern technologies to build systems that are secure, scalable, and resilient.
+      I am a Cloud Engineer with experience in OpenStack, AWS, and GCP, focusing on Kubernetes and infrastructure automation. I enjoy learning and working with modern technologies to build systems that are secure, scalable, and resilient.
     image: /images/me.jpg
     bottomImage:
       enable: true
@@ -163,7 +163,7 @@ params:
     content: |-
       I am a Cloud Engineer with 3+ years of expertise in managing and optimizing private and public cloud environments using OpenStack, AWS, and Google Cloud Platform (GCP).
 
-      Currently, I work as an L2 Cloud Operation Engineer at PT. Boer Technology (Btech), where I specialize in cloud architecture, infrastructure automation, and Kubernetes security. I am also an instructor at ADINUSA, teaching Linux and network security to professional audiences.
+      Currently, I work as an L2 Cloud Operation Engineer at PT. Boer Technology (Btech), where I specialize in cloud architecture, infrastructure automation, and Kubernetes. I am also an instructor at ADINUSA, teaching Linux and network security to professional audiences.
     skills:
       enable: true
       title: "Here are a few technologies I've been working with recently:"
